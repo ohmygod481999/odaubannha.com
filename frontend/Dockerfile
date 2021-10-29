@@ -3,7 +3,8 @@ FROM node:alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /fe-app
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+RUN yarn install 
+# RUN yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM node:alpine AS builder
@@ -12,16 +13,17 @@ COPY . .
 COPY --from=deps /fe-app/node_modules ./node_modules
 
 # Add wait-for-it
-COPY wait-for-it.sh wait-for-it.sh 
-RUN chmod +x wait-for-it.sh
+# COPY wait-for-it.sh wait-for-it.sh 
+# RUN chmod +x wait-for-it.sh
 
-RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+RUN yarn install --production --ignore-scripts --prefer-offline && yarn build
 
 # Production image, copy all the files and run next
 FROM node:alpine AS runner
 WORKDIR /fe-app
 
 ENV NODE_ENV production
+ENV NODE_OPTIONS --openssl-legacy-provider
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
