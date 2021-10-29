@@ -1,0 +1,114 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 16/09/2020 10:20
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-room:before { content: "\f100"; }
+.flaticon-hotel:before { content: "\f101"; }
+.flaticon-bed:before { content: "\f102"; }
+.flaticon-bed-1:before { content: "\f103"; }
+.flaticon-bathtub:before { content: "\f104"; }
+.flaticon-toilet:before { content: "\f105"; }
+.flaticon-kitchen:before { content: "\f106"; }
+.flaticon-cooking:before { content: "\f107"; }
+.flaticon-garage:before { content: "\f108"; }
+.flaticon-house:before { content: "\f109"; }
+.flaticon-deal:before { content: "\f10a"; }
+.flaticon-sale:before { content: "\f10b"; }
+.flaticon-rental:before { content: "\f10c"; }
+.flaticon-fund:before { content: "\f10d"; }
+.flaticon-growth:before { content: "\f10e"; }
+.flaticon-checklists:before { content: "\f10f"; }
+.flaticon-research:before { content: "\f110"; }
+.flaticon-money:before { content: "\f111"; }
+.flaticon-wipe:before { content: "\f112"; }
+.flaticon-interior-design:before { content: "\f113"; }
+.flaticon-renovation:before { content: "\f114"; }
+.flaticon-house-1:before { content: "\f115"; }
+.flaticon-flower:before { content: "\f116"; }
+.flaticon-dog-house:before { content: "\f117"; }
+.flaticon-grid:before { content: "\f118"; }
+.flaticon-home:before { content: "\f119"; }
+.flaticon-parking-area:before { content: "\f11a"; }
+.flaticon-house-2:before { content: "\f11b"; }
+.flaticon-street-view:before { content: "\f11c"; }
+.flaticon-location:before { content: "\f11d"; }
+.flaticon-win:before { content: "\f11e"; }
+.flaticon-key:before { content: "\f11f"; }
+.flaticon-search-location:before { content: "\f120"; }
+.flaticon-admin:before { content: "\f121"; }
+.flaticon-farming:before { content: "\f122"; }
+.flaticon-bedroom:before { content: "\f123"; }
+.flaticon-fit-screen:before { content: "\f124"; }
+    
+    $font-Flaticon-room: "\f100";
+    $font-Flaticon-hotel: "\f101";
+    $font-Flaticon-bed: "\f102";
+    $font-Flaticon-bed-1: "\f103";
+    $font-Flaticon-bathtub: "\f104";
+    $font-Flaticon-toilet: "\f105";
+    $font-Flaticon-kitchen: "\f106";
+    $font-Flaticon-cooking: "\f107";
+    $font-Flaticon-garage: "\f108";
+    $font-Flaticon-house: "\f109";
+    $font-Flaticon-deal: "\f10a";
+    $font-Flaticon-sale: "\f10b";
+    $font-Flaticon-rental: "\f10c";
+    $font-Flaticon-fund: "\f10d";
+    $font-Flaticon-growth: "\f10e";
+    $font-Flaticon-checklists: "\f10f";
+    $font-Flaticon-research: "\f110";
+    $font-Flaticon-money: "\f111";
+    $font-Flaticon-wipe: "\f112";
+    $font-Flaticon-interior-design: "\f113";
+    $font-Flaticon-renovation: "\f114";
+    $font-Flaticon-house-1: "\f115";
+    $font-Flaticon-flower: "\f116";
+    $font-Flaticon-dog-house: "\f117";
+    $font-Flaticon-grid: "\f118";
+    $font-Flaticon-home: "\f119";
+    $font-Flaticon-parking-area: "\f11a";
+    $font-Flaticon-house-2: "\f11b";
+    $font-Flaticon-street-view: "\f11c";
+    $font-Flaticon-location: "\f11d";
+    $font-Flaticon-win: "\f11e";
+    $font-Flaticon-key: "\f11f";
+    $font-Flaticon-search-location: "\f120";
+    $font-Flaticon-admin: "\f121";
+    $font-Flaticon-farming: "\f122";
+    $font-Flaticon-bedroom: "\f123";
+    $font-Flaticon-fit-screen: "\f124";

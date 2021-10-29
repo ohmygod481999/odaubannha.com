@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_contacts",
+  "info": {
+    "name": "contact",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "mobile": {
+      "type": "string"
+    },
+    "zalo": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

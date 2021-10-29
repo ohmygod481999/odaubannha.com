@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_custom_title_description_icons",
+  "info": {
+    "name": "titleDescriptionIcon",
+    "icon": "ankh",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subDescription": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

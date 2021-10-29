@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_about_page_journeys",
+  "info": {
+    "name": "journey",
+    "icon": "fighter-jet"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subDescription": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

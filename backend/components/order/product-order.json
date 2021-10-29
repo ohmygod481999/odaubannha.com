@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_order_product_orders",
+  "info": {
+    "name": "product order",
+    "icon": "cubes",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product": {
+      "model": "product"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "toppingorders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order.toppingorders"
+    }
+  }
+}

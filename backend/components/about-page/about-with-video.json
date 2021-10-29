@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_about_page_about_with_videos",
+  "info": {
+    "name": "about with video",
+    "icon": "file-video"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "youtubeurl": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

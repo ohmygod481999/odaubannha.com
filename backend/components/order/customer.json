@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_order_customers",
+  "info": {
+    "name": "customer",
+    "icon": "user-tag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "mobile": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "city": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "detailAddress": {
+      "type": "text"
+    }
+  }
+}

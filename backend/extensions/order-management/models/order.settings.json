@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "order.customer"
+    },
+    "productorders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order.product-order",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "process",
+        "done"
+      ]
+    }
+  }
+}

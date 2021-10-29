@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_order_toppingorders",
+  "info": {
+    "name": "toppingorders",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "topping": {
+      "plugin": "order-management",
+      "model": "topping"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

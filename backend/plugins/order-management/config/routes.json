@@ -1,0 +1,56 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/orders",
+      "handler": "order-management.find",
+      "config": {
+        "policies": [],
+        "description": "Find orders",
+        "tag": {
+          "plugin": "order-management",
+          "name": "Order",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders/:id",
+      "handler": "order-management.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orders/:id",
+      "handler": "order-management.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orders",
+      "handler": "order-management.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/toppings",
+      "handler": "order-management.findToppings",
+      "config": {
+        "policies": [],
+        "description": "Find toppings",
+        "tag": {
+          "plugin": "order-management",
+          "name": "Topping",
+          "actionType": "find"
+        }
+      }
+    }
+  ]
+}

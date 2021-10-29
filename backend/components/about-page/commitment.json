@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_page_commitments",
+  "info": {
+    "name": "commitment",
+    "icon": "hand-spock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subDescription": {
+      "type": "string"
+    },
+    "titleDescriptionIcon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.title-description-icon"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topping",
+  "info": {
+    "name": "topping",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "collection": "product"
+    }
+  }
+}
