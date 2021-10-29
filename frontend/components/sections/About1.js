@@ -21,7 +21,7 @@ function About1({
                                 About Company
                             </span>
                             <h2 className="title mb-20 color-secondary">
-                                We're is this business since{" "}
+                                We&apos;re is this business since{" "}
                                 <span className="color-primary">1981</span> and
                                 we provide the best real estate services
                             </h2>
