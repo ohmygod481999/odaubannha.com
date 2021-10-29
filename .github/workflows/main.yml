@@ -36,8 +36,9 @@ jobs:
            
       - name: Build and Push Docker Image (FE)
         uses: docker/build-push-action@v2
-        # env:
-        #   NEXT_PUBLIC_STRAPI_API_URL: https://bunrieucohuongbeo.longvb.tech
+        env:
+#           NEXT_PUBLIC_STRAPI_API_URL: https://bunrieucohuongbeo.longvb.tech
+          NODE_OPTIONS: --openssl-legacy-provider
         with:
           context: ./frontend
           file: ./frontend/Dockerfile
