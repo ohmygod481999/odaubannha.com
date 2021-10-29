@@ -16,6 +16,7 @@ COPY --from=deps /fe-app/node_modules ./node_modules
 # COPY wait-for-it.sh wait-for-it.sh 
 # RUN chmod +x wait-for-it.sh
 
+ENV NODE_OPTIONS --openssl-legacy-provider
 RUN yarn install --production --ignore-scripts --prefer-offline && yarn build
 
 # Production image, copy all the files and run next
@@ -23,7 +24,6 @@ FROM node:alpine AS runner
 WORKDIR /fe-app
 
 ENV NODE_ENV production
-ENV NODE_OPTIONS --openssl-legacy-provider
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
