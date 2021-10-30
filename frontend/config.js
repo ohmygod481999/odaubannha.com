@@ -8,42 +8,38 @@ export const navs = [
     //     path: "/",
     // },
     {
-        name: "Về chúng tôi",
+        name: "About us",
         path: "/about",
     },
     {
-        name: "Chuyện bún riêu",
-        path: "/chuyen-bun-rieu",
+        name: "Dự án",
+        path: "/projects",
     },
     {
-        name: "Thực đơn",
-        path: "/menu",
-    },
-    {
-        name: "Tin hot",
-        path: "/tin-hot",
-    },
-    {
-        name: "Nhượng quyền",
-        path: "/nhuong-quyen",
-    },
-    {
-        name: "Đơn đặt hàng lớn",
-        path: "/don-hang-lon",
-    },
-    {
-        name: "Chuỗi cửa hàng",
-        path: "/chuoi-cua-hang",
+        name: "Vay mua nhà",
+        path: "/rent",
     },
     {
         name: "Tuyển dụng",
-        items: [
-            {
-                name: "Tin tuyển dụng",
-                path: "/tin-tuyen-dung",
-            },
-        ],
+        path: "/recruitment",
     },
+    {
+        name: "Videos",
+        path: "/videos",
+    },
+    {
+        name: "Blogs",
+        path: "/blogs",
+    },
+    // {
+    //     name: "Tuyển dụng",
+    //     items: [
+    //         {
+    //             name: "Tin tuyển dụng",
+    //             path: "/tin-tuyen-dung",
+    //         },
+    //     ],
+    // },
     // {
     //     name: "Nhượng quyền",
     //     items: [

@@ -20,7 +20,7 @@ function Footer({ generalInfo }) {
                                 style={{ marginTop: "-160px" }}
                             >
                                 <h3 className="color-white mb-20">
-                                    Sign Up For Newsletter!
+                                    Đăng ký nhận tin!
                                 </h3>
                                 <p>
                                     Montes elit pharetra vestibulum maecenas
@@ -34,7 +34,7 @@ function Footer({ generalInfo }) {
                                             className="form-control"
                                             type="text"
                                             name="email"
-                                            placeholder="Subscribe"
+                                            placeholder="Email"
                                         />
                                         <button className="bg-gray color-secondary">
                                             <i className="fa fa-paper-plane" />
@@ -90,30 +90,7 @@ function Footer({ generalInfo }) {
                             </div>
                         </div>
                         <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2 wow animated slideInUp">
-                            <div className="footer-widget color-white mt-lg-30">
-                                <h3 className="color-white line-bottom pb-15 mb-20">
-                                    Links
-                                </h3>
-                                <div className="widget-content hover-white-primary">
-                                    <ul className="quick-links">
-                                        <li>
-                                            <a href="#">For Rent</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">For Sale</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Commercial</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Agents</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Property Guides</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                         </div>
                         <div className="col-sm-6 col-md-8 col-lg-5 col-xl-3 wow animated slideInDown">
                             <div className="footer-widget color-white mt-lg-30">
@@ -145,22 +122,9 @@ function Footer({ generalInfo }) {
             <div className="copyright bg-secondary color-white">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-7 col-lg-6">
-                            <ul className="copy-nav hover-white-primary py-15">
-                                <li>
-                                    <a href="#">Terms &amp; Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Site Map</a>
-                                </li>
-                            </ul>
-                        </div>
                         <div className="col-md-5 col-lg-6">
-                            <div className="py-15 text-right">
-                                Fresher @ 2020. All Rights Reserved.
+                            <div className="py-15">
+                                Ở đâu bán nhà @ 2021. All Rights Reserved.
                             </div>
                         </div>
                     </div>

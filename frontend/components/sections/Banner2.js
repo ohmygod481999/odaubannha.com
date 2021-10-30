@@ -5,7 +5,7 @@ function Banner2({ title, description, image_url }) {
     return (
         <div
             id="slider"
-            style={{ height: "900px", margin: "0 auto", marginBottom: "0px",  marginTop: "282.6px"}}
+            style={{ height: "900px", margin: "0 auto", marginBottom: "0px",  marginTop: "204.6px"}}
         >
             {/* Slide 1*/}
             <div

@@ -63,12 +63,12 @@ export default function Home({ homePage, categories }) {
                 <title>Ở đâu bán nhà</title>
                 <meta
                     name="description"
-                    content="Hãy thưởng thức những hương vị tuyệt vời tại Cô Hương Béo"
+                    content="Mua nhà ở đâu? Mua nhà ở đây"
                 />
                 <meta name="title" content="Ở đâu bán nhà" />
                 <meta
                     name="image"
-                    content="http://bunrieucohuongbeo.longvb.tech:1337/uploads/190902964_349415109854044_3295922299793811112_n_e1a572df72.jpg"
+                    content="/logo.png"
                 />
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>

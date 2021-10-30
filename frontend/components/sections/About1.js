@@ -18,7 +18,7 @@ function About1({
                     <div className="col-md-12 col-lg-6 wow animated slideInLeft">
                         <div className="side-title">
                             <span className="small-title color-primary position-relative line-primary">
-                                About Company
+                                Về chúng tôi
                             </span>
                             <h2 className="title mb-20 color-secondary">
                                 We&apos;re is this business since{" "}
@@ -39,43 +39,16 @@ function About1({
                                 sollicitud porta cum mi dis mattis ultricies
                                 montes morbi Lorem quam a facilisi.
                             </p>
-                            <div className="play-video position-relative mt-30">
-                                <div className="row">
-                                    <div className="col-md-3 col-lg-4 col-xl-3">
-                                        <div className="video-shadow">
-                                            <div className="video">
-                                                <a
-                                                    data-fancybox
-                                                    className="video-popup bg-primary color-white"
-                                                    href="https://www.youtube.com/watch?v=8NXLyGiShjs"
-                                                >
-                                                    <i
-                                                        className="fa fa-play"
-                                                        aria-hidden="true"
-                                                    />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-9 col-lg-8 col-xl-9">
-                                        <div className="y-center color-secondary">
-                                            <span>
-                                                Click on this video to check how
-                                                <br /> we work
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div className="col-md-12 col-lg-12">
                         <div className="property-looking mt-60">
                             <div className="row">
-                                <div className="col-md-6 col-lg-3 wow animated slideInUp">
+                                <div className="col-md-4 wow animated slideInUp">
                                     <div className="text-thumbnail text-center bg-secondary py-40 px-30 color-white color-white-a">
                                         <a className="mb-20" href="#">
-                                            <h4>Modern Villa</h4>
+                                            <h4>Tầm nhìn</h4>
                                         </a>
                                         <p className="mb-20">
                                             Fames elementum sollicitud pretiuma
@@ -87,10 +60,10 @@ function About1({
                                         </span>
                                     </div>
                                 </div>
-                                <div className="col-md-6 col-lg-3 wow animated slideInDown">
+                                <div className="col-md-4 wow animated slideInDown">
                                     <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
                                         <a className="mb-20" href="#">
-                                            <h4>Family House</h4>
+                                            <h4>Giá trị</h4>
                                         </a>
                                         <p className="mb-20">
                                             Fames elementum sollicitud pretiuma
@@ -102,10 +75,10 @@ function About1({
                                         </span>
                                     </div>
                                 </div>
-                                <div className="col-md-6 col-lg-3 wow animated slideInUp">
+                                <div className="col-md-4 wow animated slideInUp">
                                     <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-md-30 color-white color-white-a">
                                         <a className="mb-20" href="#">
-                                            <h4>Town House</h4>
+                                            <h4>Sứ mệnh</h4>
                                         </a>
                                         <p className="mb-20">
                                             Fames elementum sollicitud pretiuma
@@ -114,21 +87,6 @@ function About1({
                                         </p>
                                         <span className="d-block bg-primary icon-white flat-small">
                                             <i className="flaticon-hotel" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 col-lg-3 wow animated slideInDown">
-                                    <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-md-30 color-white color-white-a">
-                                        <a className="mb-20" href="#">
-                                            <h4>Appartment</h4>
-                                        </a>
-                                        <p className="mb-20">
-                                            Fames elementum sollicitud pretiuma
-                                            aenean consequat curabitur
-                                            hendrerit.
-                                        </p>
-                                        <span className="d-block bg-primary icon-white flat-small">
-                                            <i className="flaticon-rental" />
                                         </span>
                                     </div>
                                 </div>
