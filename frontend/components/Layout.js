@@ -25,6 +25,8 @@ function Layout(props) {
             <Cart /> */}
             {props.children}
             <Footer generalInfo={generalInfo}/>
+            <div id="scroll" style={{display: 'none'}}><i className="fa fa-angle-up" /></div>
+
             {/* <Cta /> */}
         </>
     );

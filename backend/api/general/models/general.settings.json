@@ -26,6 +26,30 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "meta_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
     }
   }
 }

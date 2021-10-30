@@ -108,11 +108,13 @@ function Header({ generalInfo }) {
                         <div className="col-lg-12">
                             <nav className="navbar navbar-expand-lg navbar-light px-0">
                                 <a className="navbar-brand" href="index.html">
-                                    <img
-                                        className="nav-logo"
-                                        src="images/logo/logo-white.png"
-                                        alt="logo"
-                                    />
+                                    {generalInfo.logo && (
+                                        <img
+                                            className="nav-logo"
+                                            src={getStrapiImage(generalInfo.logo)}
+                                            alt="logo"
+                                        />
+                                    )}
                                 </a>
                                 <button
                                     className="toggle-btn"

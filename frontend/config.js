@@ -3,10 +3,10 @@ export const config = {
 };
 
 export const navs = [
-    // {
-    //     name: "Trang chủ",
-    //     path: "/",
-    // },
+    {
+        name: "Trang chủ",
+        path: "/",
+    },
     {
         name: "About us",
         path: "/about",

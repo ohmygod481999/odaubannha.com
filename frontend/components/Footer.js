@@ -20,7 +20,7 @@ function Footer({ generalInfo }) {
                                 style={{ marginTop: "-160px" }}
                             >
                                 <h3 className="color-white mb-20">
-                                    Đăng ký nhận tin!
+                                    Đăng ký ngay nhận ngay máy rửa bát!
                                 </h3>
                                 <p>
                                     Montes elit pharetra vestibulum maecenas
@@ -46,11 +46,13 @@ function Footer({ generalInfo }) {
                         <div className="col-md-12 col-lg-5 col-xl-3 wow animated slideInDown">
                             <div className="footer-logo mt-lg-30">
                                 <a href="index.html">
-                                    <img
-                                        className="nav-logo"
-                                        src="images/logo/logo-white.png"
-                                        alt="Image not found!"
-                                    />
+                                    {generalInfo.logo && (
+                                        <img
+                                            className="nav-logo"
+                                            src={getStrapiImage(generalInfo.logo)}
+                                            alt="Image not found!"
+                                        />
+                                    )}
                                 </a>
                                 <div className="text-area mt-30 color-white">
                                     <p>
@@ -89,9 +91,7 @@ function Footer({ generalInfo }) {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2 wow animated slideInUp">
-                            
-                        </div>
+                        <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2 wow animated slideInUp"></div>
                         <div className="col-sm-6 col-md-8 col-lg-5 col-xl-3 wow animated slideInDown">
                             <div className="footer-widget color-white mt-lg-30">
                                 <h3 className="color-white line-bottom pb-15 mb-20">
@@ -99,8 +99,7 @@ function Footer({ generalInfo }) {
                                 </h3>
                                 <div className="widget-content">
                                     <span>
-                                        40 Towerhill Avenue, Melbourne,
-                                        Australia.
+                                        {generalInfo.address}
                                     </span>
                                     <span className="d-block mt-20">
                                         If you have any questions or need help,
@@ -111,7 +110,7 @@ function Footer({ generalInfo }) {
                                         <span className="mr-15">
                                             <i className="fa fa-phone" />
                                         </span>{" "}
-                                        +(844) 234-567-800
+                                        {generalInfo.phone}
                                     </strong>
                                 </div>
                             </div>
