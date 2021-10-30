@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -49,12 +49,12 @@ jobs:
       - name: Verify (FE)
         run: echo ${{ steps.docker_build.outputs.digest }}
         
-      # - name: Force rebuild digital ocean (FE)
-      #   run: |
-      #     curl --request POST \
-      #     --header 'Authorization: Bearer ${{ secrets.DIGITALOCEAN_TOKEN }}' \
-      #     --header 'Content-Type: application/json' \
-      #     --url https://api.digitalocean.com/v2/apps/54778550-8a83-4d0e-92a1-28d594b8672a/deployments \
-      #     --data '{
-      #      "force_build": true
-      #      }'
+      - name: Force rebuild digital ocean (FE)
+        run: |
+          curl --request POST \
+          --header 'Authorization: Bearer ${{ secrets.DIGITALOCEAN_TOKEN }}' \
+          --header 'Content-Type: application/json' \
+          --url https://api.digitalocean.com/v2/apps/907b5093-19c5-4bba-ada9-f8c74e9efd45/deployments \
+          --data '{
+           "force_build": true
+           }'
