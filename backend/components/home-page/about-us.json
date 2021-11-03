@@ -10,27 +10,6 @@
     "title": {
       "type": "string"
     },
-    "subDescription": {
-      "type": "string"
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "btnText": {
-      "type": "string"
-    },
-    "btnLink": {
-      "type": "string"
-    },
     "description": {
       "type": "richtext"
     }

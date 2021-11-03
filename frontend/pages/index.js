@@ -11,10 +11,10 @@ import Team1 from "../components/sections/Team1";
 import Testimonia1 from "../components/sections/Testimonia1";
 import Blog1 from "../components/sections/Blog1";
 import {
-    getProducts,
-    getCategories,
-    getHomePage,
-    fetchAPI,
+  getProducts,
+  getCategories,
+  getHomePage,
+  fetchAPI
 } from "../utils/api";
 import Banner2 from "../components/sections/Banner2";
 import Menu2 from "../components/sections/Menu2";
@@ -31,127 +31,126 @@ import Testimonial from "../components/sections1/Testimonial";
 import Promotion from "../components/sections1/Promotion";
 
 export default function Home({ homePage, categories, generalInfo }) {
-    const router = useRouter();
-    const [modalPromotionData, setModalPromotionData] = useState(null);
+  const router = useRouter();
+  const [modalPromotionData, setModalPromotionData] = useState(null);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const { $ } = window;
+      $("#slider").layerSlider({
+        sliderVersion: "6.2.1",
+        type: "fullwidth",
+        responsiveUnder: 0,
+        layersContainer: 1200,
+        maxRatio: 1,
+        parallaxScrollReverse: true,
+        hideUnder: 0,
+        hideOver: 100000,
+        skin: "v5",
+        showBarTimer: false,
+        showCircleTimer: false,
+        thumbnailNavigation: "disabled",
+        allowRestartOnResize: false,
+        skinsPath: "images/slider/skins/",
+        height: 900
+      });
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const { $ } = window;
-            $("#slider").layerSlider({
-                sliderVersion: "6.2.1",
-                type: "fullwidth",
-                responsiveUnder: 0,
-                layersContainer: 1200,
-                maxRatio: 1,
-                parallaxScrollReverse: true,
-                hideUnder: 0,
-                hideOver: 100000,
-                skin: "v5",
-                showBarTimer: false,
-                showCircleTimer: false,
-                thumbnailNavigation: "disabled",
-                allowRestartOnResize: false,
-                skinsPath: "images/slider/skins/",
-                height: 900,
-            });
-
-            $('.partnerss').owlCarousel({
-                loop: true,
-                autoplay:true,
-                smartSpeed:1500,
-                autoplayTimeout:5000,
-                autoplayHoverPause:true,
-                margin: 30,
-                dots: false,
-                nav: false,
-                navText: ['<span class="fa fa-long-arrow-left"></span>','<span class="fa fa-long-arrow-right"></span>'],
-                responsive:{
-       
-                   0:{
-                     items:2
-                   },
-                   600:{
-                     items:2
-                   },
-                   768:{
-                     items:4
-                   },
-                   1024:{
-                     items:3
-                   },
-                   1200:{
-                     items:3
-                   }
-                 }
-            });
-
-            $('.neighborhoodss').owlCarousel({
-                loop: true,
-                autoplay:true,
-                smartSpeed:1500,
-                autoplayTimeout:5000,
-                autoplayHoverPause:true,
-                margin: 30,
-                dots: false,
-                nav: true,
-                navText: ['<span class="fa fa-long-arrow-left"></span>','<span class="fa fa-long-arrow-right"></span>'],
-                responsive:{
-       
-                   0:{
-                     items:1
-                   },
-                   600:{
-                     items:1
-                   },
-                   767:{
-                     items:2
-                   },
-                   1024:{
-                     items:2
-                   },
-                   1200:{
-                     items:3
-                   }
-                 }
-            });
+      $(".partnerss").owlCarousel({
+        loop: true,
+        autoplay: true,
+        smartSpeed: 1500,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        margin: 30,
+        dots: false,
+        nav: false,
+        navText: [
+          '<span class="fa fa-long-arrow-left"></span>',
+          '<span class="fa fa-long-arrow-right"></span>'
+        ],
+        responsive: {
+          0: {
+            items: 2
+          },
+          600: {
+            items: 2
+          },
+          768: {
+            items: 4
+          },
+          1024: {
+            items: 3
+          },
+          1200: {
+            items: 3
+          }
         }
-    }, []);
+      });
 
-    // if (router.isFallback) {
-    //     return <PreLoader />;
-    // }
+      $(".neighborhoodss").owlCarousel({
+        loop: true,
+        autoplay: true,
+        smartSpeed: 1500,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        margin: 30,
+        dots: false,
+        nav: true,
+        navText: [
+          '<span class="fa fa-long-arrow-left"></span>',
+          '<span class="fa fa-long-arrow-right"></span>'
+        ],
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          767: {
+            items: 2
+          },
+          1024: {
+            items: 2
+          },
+          1200: {
+            items: 3
+          }
+        }
+      });
+    }
+  }, []);
 
-    return (
-        <>
-            <Head>
-                <title>{generalInfo && generalInfo.title}</title>
-                <meta
-                    name="description"
-                    content={generalInfo && generalInfo.meta_description}
-                />
-                <meta name="title" content={generalInfo && generalInfo.meta_title} />
-                <meta name="image" content={generalInfo&& getStrapiImage(generalInfo.meta_image)} />
-                {/* <link rel="icon" href="/favicon.ico" /> */}
-            </Head>
+  // if (router.isFallback) {
+  //     return <PreLoader />;
+  // }
 
-            <Banner2
-                title={_.get(homePage, "title")}
-                description={_.get(homePage, "description")}
-                image_url={_.get(homePage, "image.url")}
-            />
-            <About1
-                title={_.get(homePage, "aboutus.title")}
-                subDescription={_.get(homePage, "aboutus.subDescription")}
-                description={_.get(homePage, "aboutus.description")}
-                image_url={_.get(homePage, "aboutus.image.url")}
-                btnLink={_.get(homePage, "aboutus.btnLink")}
-                btnText={_.get(homePage, "aboutus.btnText")}
-            />
-            <Promotion />
-            <HightlightProject />
-            <Testimonial />
-            <Partner />
-            {/* <Menu2 categories={categories} />
+  return (
+    <>
+      <Head>
+        <title>{generalInfo && generalInfo.title}</title>
+        <meta
+          name="description"
+          content={generalInfo && generalInfo.meta_description}
+        />
+        <meta name="title" content={generalInfo && generalInfo.meta_title} />
+        <meta
+          name="image"
+          content={generalInfo && getStrapiImage(generalInfo.meta_image)}
+        />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+      </Head>
+
+      <Banner2
+      // title={_.get(homePage, "title")}
+      // description={_.get(homePage, "description")}
+      // image_url={_.get(homePage, "image.url")}
+      />
+      <About1 homePage={homePage} />
+      <Promotion />
+      <HightlightProject />
+      <Testimonial />
+      <Partner />
+      {/* <Menu2 categories={categories} />
             <About2
                 title={_.get(homePage, "aboutus2.title")}
                 subDescription={_.get(homePage, "aboutus2.subDescription")}
@@ -168,15 +167,15 @@ export default function Home({ homePage, categories, generalInfo }) {
                 btnLink={_.get(homePage, "aboutus2.btnLink")}
                 btnText={_.get(homePage, "aboutus2.btnText")}
             /> */}
-        </>
-    );
+    </>
+  );
 }
 
 export async function getServerSideProps() {
-    const [homePage, categories, generalInfo] = await Promise.all([
-        getHomePage(),
-        getCategories(),
-        fetchAPI("/general"),
-    ]);
-    return { props: { homePage, categories, generalInfo } };
+  const [homePage, categories, generalInfo] = await Promise.all([
+    getHomePage(),
+    getCategories(),
+    fetchAPI("/general")
+  ]);
+  return { props: { homePage, categories, generalInfo } };
 }
