@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_about_page_content_children",
+  "info": {
+    "name": "contentChild",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "qoute": {
+      "type": "string",
+      "default": "null"
+    }
+  }
+}
