@@ -1,14 +1,15 @@
 {
-  "collectionName": "components_home_page_aboutus2s",
+  "collectionName": "components_home_page_about_us3s",
   "info": {
-    "name": "aboutus2",
-    "icon": "atom",
+    "name": "aboutUs3",
+    "icon": "pen-nib",
     "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "description": {
       "type": "richtext"

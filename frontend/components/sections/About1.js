@@ -1,102 +1,69 @@
 import React from "react";
-import { getStrapiURL } from "../../utils/api";
-import Link from "next/link";
-import { color } from "../../utils/color";
 
-function About1({
-    title,
-    image_url,
-    subDescription,
-    description,
-    btnText,
-    btnLink,
-}) {
-    return (
-        <section>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12 col-lg-6 wow animated slideInLeft">
-                        <div className="side-title">
-                            <span className="small-title color-primary position-relative line-primary">
-                                Về chúng tôi
-                            </span>
-                            <h2 className="title mb-20 color-secondary">
-                                We&apos;re is this business since{" "}
-                                <span className="color-primary">1981</span> and
-                                we provide the best real estate services
-                            </h2>
-                        </div>
-                    </div>
-                    <div className="col-md-12 col-lg-6 wow animated slideInRight">
-                        <div className="text-area">
-                            <p>
-                                Feugiat lorem purus inceptos est aliquet cum,
-                                scelerisque odio nullam purus fames lobortis
-                                hendrerit sit congue eget aptent ultricies vitae
-                                praese elemen diam fames phasellus taciti
-                                cubilia inceptos. Dictum sapien inceptos interdu
-                                aliquet euismod. Parturie laoreet faucibus
-                                sollicitud porta cum mi dis mattis ultricies
-                                montes morbi Lorem quam a facilisi.
-                            </p>
-                            
-                        </div>
-                    </div>
-                    <div className="col-md-12 col-lg-12">
-                        <div className="property-looking mt-60">
-                            <div className="row">
-                                <div className="col-md-4 wow animated slideInUp">
-                                    <div className="text-thumbnail text-center bg-secondary py-40 px-30 color-white color-white-a">
-                                        <a className="mb-20" href="#">
-                                            <h4>Tầm nhìn</h4>
-                                        </a>
-                                        <p className="mb-20">
-                                            Fames elementum sollicitud pretiuma
-                                            aenean consequat curabitur
-                                            hendrerit.
-                                        </p>
-                                        <span className="d-block bg-primary icon-white flat-small">
-                                            <i className="flaticon-house-2" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 wow animated slideInDown">
-                                    <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
-                                        <a className="mb-20" href="#">
-                                            <h4>Giá trị</h4>
-                                        </a>
-                                        <p className="mb-20">
-                                            Fames elementum sollicitud pretiuma
-                                            aenean consequat curabitur
-                                            hendrerit.
-                                        </p>
-                                        <span className="d-block bg-primary icon-white flat-small">
-                                            <i className="flaticon-rental" />
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 wow animated slideInUp">
-                                    <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-md-30 color-white color-white-a">
-                                        <a className="mb-20" href="#">
-                                            <h4>Sứ mệnh</h4>
-                                        </a>
-                                        <p className="mb-20">
-                                            Fames elementum sollicitud pretiuma
-                                            aenean consequat curabitur
-                                            hendrerit.
-                                        </p>
-                                        <span className="d-block bg-primary icon-white flat-small">
-                                            <i className="flaticon-hotel" />
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+function About1({ homePage }) {
+  const { title, description, mission, subtitle, value, vision } =
+    homePage.aboutus;
+  console.log(homePage);
+  return (
+    <section>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-lg-6 wow animated slideInLeft">
+            <div className="side-title">
+              <span className="small-title color-primary position-relative line-primary">
+                {subtitle}
+              </span>
+              <h2 className="title mb-20 color-secondary">{title}</h2>
             </div>
-        </section>
-    );
+          </div>
+          <div className="col-md-12 col-lg-6 wow animated slideInRight">
+            <div className="text-area">
+              <p>{description}</p>
+            </div>
+          </div>
+          <div className="col-md-12 col-lg-12">
+            <div className="property-looking mt-60">
+              <div className="row">
+                <div className="col-md-4 wow animated slideInDown">
+                  <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
+                    <a className="mb-20" href="#">
+                      <h4>{vision.title}</h4>
+                    </a>
+                    <p className="mb-20">{vision.description}</p>
+                    <span className="d-block bg-primary icon-white flat-small">
+                      <i className="flaticon-rental" />
+                    </span>
+                  </div>
+                </div>
+                <div className="col-md-4 wow animated slideInUp">
+                  <div className="text-thumbnail text-center bg-secondary py-40 px-30 color-white color-white-a">
+                    <a className="mb-20" href="#">
+                      <h4>{value.title}</h4>
+                    </a>
+                    <p className="mb-20">{value.description}</p>
+                    <span className="d-block bg-primary icon-white flat-small">
+                      <i className="flaticon-house-2" />
+                    </span>
+                  </div>
+                </div>
+                <div className="col-md-4 wow animated slideInDown">
+                  <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
+                    <a className="mb-20" href="#">
+                      <h4>{mission.title}</h4>
+                    </a>
+                    <p className="mb-20">{mission.description}</p>
+                    <span className="d-block bg-primary icon-white flat-small">
+                      <i className="flaticon-rental" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default About1;

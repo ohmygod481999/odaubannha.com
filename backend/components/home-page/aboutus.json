@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_home_page_aboutuses",
+  "info": {
+    "name": "aboutus",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "true": {
+      "type": "boolean"
+    },
+    "mission": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.mission"
+    },
+    "value": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.foresight"
+    },
+    "vision": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.vision"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
