@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_page_contents",
+  "info": {
+    "name": "content",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contentChild": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.content-child"
+    }
+  }
+}

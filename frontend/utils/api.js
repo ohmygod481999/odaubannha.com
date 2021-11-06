@@ -14,9 +14,7 @@ export function getStrapiURL(path) {
 export const getHomePage = async () => {
   try {
     const fullUrl = getStrapiURL("/home-page");
-
     const res = await axios.get(fullUrl);
-
     const data = await res.data;
     return data;
   } catch (error) {
@@ -24,17 +22,17 @@ export const getHomePage = async () => {
   }
 };
 
-//========= old code - will be changed ===============
 export async function fetchAPI(path) {
   const requestUrl = getStrapiURL(path);
-  const response = await fetch(requestUrl);
   try {
-    const data = await response.json();
+    const response = await axios(requestUrl);
+    const data = await response.data;
     return data;
   } catch (e) {
     return {};
   }
 }
+//========= old code - will be changed ===============
 
 export async function postAPI(path, body) {
   const requestUrl = getStrapiURL(path);
