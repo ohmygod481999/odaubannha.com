@@ -21,7 +21,16 @@ export const getHomePage = async () => {
     console.log(error);
   }
 };
-
+export const getVideos = async () => {
+  try {
+    const fullUrl = getStrapiURL("/videos");
+    const res = await axios.get(fullUrl);
+    const data = await res.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 export async function fetchAPI(path) {
   const requestUrl = getStrapiURL(path);
   try {
