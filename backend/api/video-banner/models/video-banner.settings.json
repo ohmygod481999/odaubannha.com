@@ -1,22 +1,24 @@
 {
   "kind": "singleType",
-  "collectionName": "franchises",
+  "collectionName": "video_banners",
   "info": {
-    "name": "videoArticle",
-    "description": ""
+    "name": "videoBanner"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
     },
+    "subtitle": {
+      "type": "richtext"
+    },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -26,9 +28,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "subtitle": {
-      "type": "richtext"
     }
   }
 }

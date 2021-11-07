@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/chain-store",
-      "handler": "chain-store.find",
+      "path": "/article-banner",
+      "handler": "article-banner.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/chain-store",
-      "handler": "chain-store.update",
+      "path": "/article-banner",
+      "handler": "article-banner.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/chain-store",
-      "handler": "chain-store.delete",
+      "path": "/article-banner",
+      "handler": "article-banner.delete",
       "config": {
         "policies": []
       }

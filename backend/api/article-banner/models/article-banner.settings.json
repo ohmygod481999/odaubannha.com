@@ -1,22 +1,24 @@
 {
   "kind": "singleType",
-  "collectionName": "chain_stores",
+  "collectionName": "article_banners",
   "info": {
-    "name": "Chain store",
-    "description": ""
+    "name": "articleBanner"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
     },
+    "subtitle": {
+      "type": "richtext"
+    },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -26,16 +28,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "info": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.title-description-icon"
-    },
-    "contact": {
-      "type": "component",
-      "repeatable": false,
-      "component": "custom.contact"
     }
   }
 }
