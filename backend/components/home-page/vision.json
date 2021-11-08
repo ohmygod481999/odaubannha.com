@@ -2,12 +2,13 @@
   "collectionName": "components_home_page_visions",
   "info": {
     "name": "vision",
-    "icon": "arrows-alt"
+    "icon": "arrows-alt",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "text"
+      "type": "string"
     },
     "description": {
       "type": "text"
