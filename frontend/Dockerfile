@@ -1,6 +1,6 @@
 FROM node:alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
+RUN apk update && apk add --no-cache libc6-compat
 WORKDIR /fe-app
 COPY package.json yarn.lock ./
 RUN yarn install 
@@ -17,7 +17,9 @@ COPY --from=deps /fe-app/node_modules ./node_modules
 # RUN chmod +x wait-for-it.sh
 
 ENV NODE_OPTIONS --openssl-legacy-provider
-RUN yarn install --production --ignore-scripts --prefer-offline && yarn build
+RUN yarn install --production --ignore-scripts --prefer-offline
+RUN rm -r /fe-app/node_modules/@next/swc-linux-x64-gnu
+RUN yarn build
 
 # Production image, copy all the files and run next
 FROM node:alpine AS runner
