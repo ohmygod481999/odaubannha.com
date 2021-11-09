@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/video-banner",
+      "handler": "video-banner.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/video-banner",
+      "handler": "video-banner.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/video-banner",
+      "handler": "video-banner.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

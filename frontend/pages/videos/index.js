@@ -1,16 +1,27 @@
 import React from "react";
 import Video from "../../components/sections/Video";
-import { getVideos } from "../../utils/api";
+import { fetchAPI, getVideos } from "../../utils/api";
 import Breadcrumb from "../../components/Breadcrumb";
+import Banner from "../../components/Banner";
 
-function Videos({ videos }) {
-  return <Video videos={videos} />;
+function Videos({ videos, videoBanner }) {
+  console.log(videoBanner);
+  return (
+    <div>
+      <Banner bannerData={videoBanner} />
+      <Video videos={videos} />
+    </div>
+  );
 }
 export const getServerSideProps = async () => {
-  const videos = await getVideos();
+  const [videos, videoBanner] = await Promise.all([
+    getVideos(),
+    fetchAPI("/video-banner")
+  ]);
   return {
     props: {
-      videos
+      videos,
+      videoBanner
     }
   };
 };

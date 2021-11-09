@@ -12,6 +12,7 @@ import {
 function BlogDetail({ article }) {
   const { title, description, image, created_at } = article;
   const htmlDescription = convertMarkdownToHtml(description);
+
   return (
     <section>
       <div className="container">
@@ -19,7 +20,7 @@ function BlogDetail({ article }) {
           <div className="col-md-12 col-lg-8">
             <div className="blog-item mt-md-50">
               <div className="blog-img position-relative post-content wow slideInUp animated">
-                <img src={image?.name} alt="Image" />
+                <img src={getStrapiImage(image)} alt="Image" />
                 <div className="date post-date float-left bg-gray mr-20 text-center color-secondary">
                   <div className="py-10">
                     <span className="d-block">{getDayInMonth(created_at)}</span>
@@ -53,10 +54,10 @@ function BlogDetail({ article }) {
                 </blockquote>
                 <div className="row my-30 wow slideInUp animated">
                   <div className="col-lg-6 col-md-6">
-                    <img src={image.name} alt="image" />
+                    <img src={getStrapiImage(image)} alt="image" />
                   </div>
                   <div className="col-lg-6 col-md-6">
-                    <img src={image.name} alt="image" />
+                    <img src={getStrapiImage(image)} alt="image" />
                   </div>
                 </div>
                 <div className="share bg-gray p-30 mt-30 wow slideInUp animated">
