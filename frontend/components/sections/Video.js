@@ -3,10 +3,10 @@ import { getStrapiImage } from "../../utils/medias";
 import TimeAgo from "../TimeAgo";
 function Video({ videos }) {
   return (
-    <div className="section mt-50">
+    <div className="section mt-50" style={{ marginBottom: "150px"}}>
       <div className="container">
         <div className="row ">
-          <div className="col-md-12 col-lg-9">
+          <div className="col-md-12">
             {videos.map((video) => {
               const { title, url, published_at } = video;
               return (
@@ -18,7 +18,7 @@ function Video({ videos }) {
                         position: "relative",
                         width: "100%",
                         paddingBottom: "56,25%",
-                        height: "200px"
+                        height: "300px"
                       }}
                     >
                       <iframe
@@ -42,7 +42,7 @@ function Video({ videos }) {
                   <div className="col-lg-7">
                     <div className="about_box box_shadow1">
                       <div className="heading_s4">
-                        <h2>{title}</h2>
+                        <h3 className="color-secondary">{title}</h3>
                       </div>
                       <p>
                         last update at: {"  "}
@@ -54,21 +54,7 @@ function Video({ videos }) {
               );
             })}
           </div>
-          <div className="col-md-12 col-lg-3">
-            <div className="blog-sidebar color-secondary-a">
-              <div className="widget py-50 px-30 bg-white  shadow wow slideInDown animated">
-                <h3 className="color-secondary line-bottom pb-15 mb-30">
-                  Sắp xếp theo
-                </h3>
-                <ul className="widget-catogory">
-                  <li>
-                    <a href="#">Mới nhất</a>
-                    <a href="#">Cũ nhất</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

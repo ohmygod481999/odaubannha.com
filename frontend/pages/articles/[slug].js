@@ -26,7 +26,6 @@ function DetailBlog({ article = {} }) {
           key="image"
         />
       </Head>
-      <Breadcrumb title={article.title} image={article.image} />
       <BlogDetail article={article} />
     </div>
   );
@@ -38,15 +37,3 @@ export async function getServerSideProps({ params }) {
   const article = await getArticle(params.slug);
   return { props: { article } };
 }
-
-// export async function getStaticPaths() {
-//     const articles = await getArticles();
-//     return {
-//         paths: articles.map((_article) => {
-//             return {
-//                 params: { slug: _article.slug },
-//             };
-//         }),
-//         fallback: true,
-//     };
-// }

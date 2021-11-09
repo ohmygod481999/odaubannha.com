@@ -2,7 +2,7 @@ import React from "react";
 
 function Error404() {
     return (
-        <div className="section">
+        <div className="section mt-50">
             <div className="container">
                 <div className="row justify-content-center">
                     <div

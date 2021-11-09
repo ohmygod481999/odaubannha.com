@@ -40,26 +40,9 @@ function BlogDetail({ article }) {
                   {title}
                 </h3>
 
-                <p className={`mb-15 wow slideInUp animated`}>
-                  {htmlDescription}
+                <p className={`mb-15 wow slideInUp animated`} dangerouslySetInnerHTML={{__html: htmlDescription}}>
                 </p>
 
-                <blockquote className="bg-gray color-secondary text-center p-30 my-30 wow slideInDown animated">
-                  <span className="mb-15 color-primary">
-                    <i className="fa fa-quote-left" />
-                  </span>
-                  <p className="m-0">
-                    <strong>{title}</strong>
-                  </p>
-                </blockquote>
-                <div className="row my-30 wow slideInUp animated">
-                  <div className="col-lg-6 col-md-6">
-                    <img src={getStrapiImage(image)} alt="image" />
-                  </div>
-                  <div className="col-lg-6 col-md-6">
-                    <img src={getStrapiImage(image)} alt="image" />
-                  </div>
-                </div>
                 <div className="share bg-gray p-30 mt-30 wow slideInUp animated">
                   <div className="row">
                     <div className="col-lg-7 col-md-7">

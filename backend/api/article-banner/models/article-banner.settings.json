@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "article_banners",
   "info": {
-    "name": "articleBanner"
+    "name": "blog",
+    "description": ""
   },
   "options": {
     "increments": true,
