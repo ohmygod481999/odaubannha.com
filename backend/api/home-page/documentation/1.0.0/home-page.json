@@ -347,9 +347,6 @@
               "subtitle": {
                 "type": "string"
               },
-              "true": {
-                "type": "boolean"
-              },
               "mission": {
                 "type": "object",
                 "required": [
@@ -364,9 +361,6 @@
                   },
                   "description": {
                     "type": "string"
-                  },
-                  "true": {
-                    "type": "boolean"
                   }
                 }
               },
@@ -444,9 +438,6 @@
               "subtitle": {
                 "type": "string"
               },
-              "true": {
-                "type": "boolean"
-              },
               "mission": {
                 "type": "object",
                 "required": [
@@ -461,9 +452,6 @@
                   },
                   "description": {
                     "type": "string"
-                  },
-                  "true": {
-                    "type": "boolean"
                   }
                 }
               },

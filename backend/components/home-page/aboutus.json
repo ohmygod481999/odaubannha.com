@@ -13,9 +13,6 @@
     "subtitle": {
       "type": "string"
     },
-    "true": {
-      "type": "boolean"
-    },
     "mission": {
       "type": "component",
       "repeatable": false,
