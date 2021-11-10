@@ -5,7 +5,7 @@ import axios from "axios";
 export function getStrapiURL(path) {
   return `${
     process.env.NEXT_PUBLIC_STRAPI_API_URL ||
-    "https://bunrieucohuongbeo.longvb.tech"
+    "http://admin.odaubannha.com:1337"
   }${path}`;
 }
 
