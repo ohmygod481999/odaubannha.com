@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/project-banner",
+      "handler": "project-banner.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/project-banner",
+      "handler": "project-banner.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/project-banner",
+      "handler": "project-banner.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
