@@ -1,0 +1,12 @@
+.products .select-option li input[type="radio"]:checked + label::before {
+  font-size: 12px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  content: "\f00c";
+  font-weight: 300;
+  font-family: "FontAwesome";
+  border: none;
+  background-color: #fd9834;
+  color: white;
+}
