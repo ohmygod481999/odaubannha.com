@@ -43,6 +43,6 @@ export function getStrapiMedia(url) {
 
     // Otherwise prepend the URL path with the Strapi URL
     return `${
-        process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://bunrieucohuongbeo.longvb.tech"
+        process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://admin.odaubannha.com"
     }${url}`;
 }
