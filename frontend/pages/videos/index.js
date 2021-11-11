@@ -3,11 +3,15 @@ import Video from "../../components/sections/Video";
 import { fetchAPI, getVideos } from "../../utils/api";
 import Breadcrumb from "../../components/Breadcrumb";
 import Banner from "../../components/Banner";
+import Head from "next/head";
 
 function Videos({ videos, videoBanner }) {
   console.log(videoBanner);
   return (
     <div>
+    <Head>
+        <title>{videoBanner.title}</title>
+    </Head>
       <Banner bannerData={videoBanner} />
       <Video videos={videos} />
     </div>
