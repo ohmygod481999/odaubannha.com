@@ -21,6 +21,11 @@ function BlogDetail({ article, articlesData }) {
   // useEffect(() => {
   //   htmlDescription = convertMarkdownToHtml(description);
   // }, []);
+  const random = articlesData
+    .filter((x) => x.id !== article.id)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+
   return (
     <section>
       <div className="container">
@@ -129,7 +134,7 @@ function BlogDetail({ article, articlesData }) {
                   Bài viết tương tự
                 </h3>
                 <ul className="widget-news">
-                  {articlesData.map((article) => {
+                  {random.map((article) => {
                     return (
                       <li>
                         <h6>

@@ -7,7 +7,6 @@ import { getStrapiImage } from "../../utils/medias";
 import { fetchAPI } from "../../utils/api";
 
 function DetailBlog({ article = {}, articlesData }) {
-  const random = articlesData.sort(() => 0.5 - Math.random()).slice(0, 4);
   return (
     <div>
       <Head>
@@ -28,7 +27,7 @@ function DetailBlog({ article = {}, articlesData }) {
           key="image"
         />
       </Head>
-      <BlogDetail article={article} articlesData={random} />
+      <BlogDetail article={article} articlesData={articlesData} />
     </div>
   );
 }
