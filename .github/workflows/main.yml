@@ -37,7 +37,7 @@ jobs:
       - name: Build and Push Docker Image (FE)
         uses: docker/build-push-action@v2
         env:
-          NEXT_PUBLIC_STRAPI_API_URL: http://admin.odaubannha.com:1337
+          NEXT_PUBLIC_STRAPI_API_URL: https://admin.odaubannha.com
         with:
           context: ./frontend
           file: ./frontend/Dockerfile
