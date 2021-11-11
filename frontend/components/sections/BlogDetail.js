@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CommentInArticle from "./CommentInArticle";
 import { getStrapiURL } from "../../utils/api";
 import { getStrapiImage } from "../../utils/medias";
+import Link from "next/link";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import {
   formatDate,
   convertMarkdownToHtml,
@@ -9,10 +15,12 @@ import {
   getMonthName
 } from "../../utils/common";
 
-function BlogDetail({ article }) {
+function BlogDetail({ article, articlesData }) {
   const { title, description, image, created_at } = article;
-  const htmlDescription = convertMarkdownToHtml(description);
-
+  // let htmlDescription;
+  // useEffect(() => {
+  //   htmlDescription = convertMarkdownToHtml(description);
+  // }, []);
   return (
     <section>
       <div className="container">
@@ -40,7 +48,11 @@ function BlogDetail({ article }) {
                   {title}
                 </h3>
 
-                <p className={`mb-15 wow slideInUp animated`} dangerouslySetInnerHTML={{__html: htmlDescription}}>
+                <p
+                  className={`mb-15 wow slideInUp animated`}
+                  // dangerouslySetInnerHTML={{ __html: htmlDescription }}
+                >
+                  {ReactHtmlParser(description)}
                 </p>
 
                 <div className="share bg-gray p-30 mt-30 wow slideInUp animated">
@@ -110,97 +122,38 @@ function BlogDetail({ article }) {
                   <i className="fa fa-search" aria-hidden="true" />
                 </button>
               </form>
-              {/* Categories */}
-              <div className="widget py-50 px-30 bg-white mt-50 shadow wow slideInDown animated">
-                <h3 className="color-secondary line-bottom pb-15 mb-30">
-                  Content
-                </h3>
-                <ul className="widget-catogory">
-                  <li>
-                    <a href="#">{title}</a>
-                  </li>
-                </ul>
-              </div>
+
               {/* Recent News */}
               <div className="widget py-50 px-30 bg-white mt-50 shadow wow slideInDown animated">
                 <h3 className="color-secondary line-bottom pb-15 mb-30">
-                  Recent News
+                  Bài viết tương tự
                 </h3>
                 <ul className="widget-news">
-                  <li>
-                    <h6>
-                      <a className="post-widget-title" href="#">
-                        Pellentes bibendum felis soc feugy tempus suscipit
-                        bibendum.
-                      </a>
-                    </h6>
-                    <div className="post-meta color-gray mt-5 f-14">
-                      <span className="d-inline-block">10 Mar 2020</span>
-                      <a
-                        className="d-inline-block color-gray float-right"
-                        href="#"
-                      >
-                        02 Comments
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <h6>
-                      <a className="post-widget-title" href="#">
-                        Pellentes bibendum felis soc feugy tempus suscipit
-                        bibendum.
-                      </a>
-                    </h6>
-                    <div className="post-meta color-gray mt-5 f-14">
-                      <span className="d-inline-block">10 Mar 2020</span>
-                      <a
-                        className="d-inline-block color-gray float-right"
-                        href="#"
-                      >
-                        02 Comments
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <h6>
-                      <a className="post-widget-title" href="#">
-                        Pellentes bibendum felis soc feugy tempus suscipit
-                        bibendum.
-                      </a>
-                    </h6>
-                    <div className="post-meta color-gray mt-5 f-14">
-                      <span className="d-inline-block">10 Mar 2020</span>
-                      <a
-                        className="d-inline-block color-gray float-right"
-                        href="#"
-                      >
-                        02 Comment
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              {/* Widget Archive */}
-              <div className="widget py-50 px-30 bg-white mt-50 shadow wow slideInDown animated">
-                <h3 className="color-secondary line-bottom pb-15 mb-30">
-                  Archive
-                </h3>
-                <ul className="widget-archive">
-                  <li>
-                    <a href="#">February 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">January 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">December 2019</a>
-                  </li>
-                  <li>
-                    <a href="#">November 2019</a>
-                  </li>
-                  <li>
-                    <a href="#">October 2019</a>
-                  </li>
+                  {articlesData.map((article) => {
+                    return (
+                      <li>
+                        <h6>
+                          <Link
+                            className="post-widget-title"
+                            href={`/articles/${article.slug}`}
+                          >
+                            {article.title}
+                          </Link>
+                        </h6>
+                        <div className="post-meta color-gray mt-5 f-14">
+                          <span className="d-inline-block">
+                            {formatDate(article.published_at)}
+                          </span>
+                          <a
+                            className="d-inline-block color-gray float-right"
+                            href="#"
+                          >
+                            by admin
+                          </a>
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>

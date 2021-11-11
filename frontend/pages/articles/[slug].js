@@ -4,8 +4,10 @@ import { useEffect } from "react";
 import { getArticles, getArticle } from "../../services/article.service";
 import Head from "next/head";
 import { getStrapiImage } from "../../utils/medias";
+import { fetchAPI } from "../../utils/api";
 
-function DetailBlog({ article = {} }) {
+function DetailBlog({ article = {}, articlesData }) {
+  const random = articlesData.sort(() => 0.5 - Math.random()).slice(0, 4);
   return (
     <div>
       <Head>
@@ -26,7 +28,7 @@ function DetailBlog({ article = {} }) {
           key="image"
         />
       </Head>
-      <BlogDetail article={article} />
+      <BlogDetail article={article} articlesData={random} />
     </div>
   );
 }
@@ -34,6 +36,9 @@ function DetailBlog({ article = {} }) {
 export default DetailBlog;
 
 export async function getServerSideProps({ params }) {
-  const article = await getArticle(params.slug);
-  return { props: { article } };
+  const [article, articlesData] = await Promise.all([
+    getArticle(params.slug),
+    fetchAPI("/articles")
+  ]);
+  return { props: { article, articlesData } };
 }
