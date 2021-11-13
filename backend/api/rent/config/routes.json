@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rent",
+      "handler": "rent.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rent",
+      "handler": "rent.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rent",
+      "handler": "rent.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
