@@ -534,9 +534,6 @@
           "description": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
           "regions": {
             "type": "array",
             "items": {
@@ -685,6 +682,23 @@
           },
           "address": {
             "type": "string"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "from": {
+                "type": "number"
+              },
+              "to": {
+                "type": "number"
+              }
+            }
           }
         }
       },
@@ -700,9 +714,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "price": {
-            "type": "number"
           },
           "regions": {
             "type": "array",
@@ -729,6 +740,23 @@
           },
           "address": {
             "type": "string"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "from": {
+                "type": "number"
+              },
+              "to": {
+                "type": "number"
+              }
+            }
           },
           "created_by": {
             "type": "string"

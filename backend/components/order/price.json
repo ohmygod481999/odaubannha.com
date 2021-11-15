@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_order_prices",
+  "info": {
+    "name": "price",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "float"
+    },
+    "to": {
+      "type": "float"
+    }
+  }
+}
