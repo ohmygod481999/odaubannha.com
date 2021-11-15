@@ -9,5 +9,10 @@ export default function Rent({ rentData }) {
     backgroundSize: "cover",
     height: "100vh"
   };
-  return <div className="container  mt-10" style={background}></div>;
+  return <div className="container" style={{
+    marginBottom: "130px",
+    marginTop: "30px"
+  }}>
+    <img src={getStrapiImage(imageContent[0])} className="w-100" />
+  </div>;
 }
