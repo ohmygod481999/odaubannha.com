@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/15/2021 11:29:12 AM"
+    "x-generation-date": "11/15/2021 2:22:49 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8032,9 +8032,6 @@
                 "description": {
                   "type": "string"
                 },
-                "price": {
-                  "type": "number"
-                },
                 "regions": {
                   "type": "array",
                   "items": {
@@ -8062,6 +8059,9 @@
                 },
                 "address": {
                   "type": "string"
+                },
+                "price": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -8565,9 +8565,6 @@
           "description": {
             "type": "string"
           },
-          "price": {
-            "type": "number"
-          },
           "regions": {
             "type": "array",
             "items": {
@@ -8716,6 +8713,23 @@
           },
           "address": {
             "type": "string"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "from": {
+                "type": "number"
+              },
+              "to": {
+                "type": "number"
+              }
+            }
           }
         }
       },
@@ -8731,9 +8745,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "price": {
-            "type": "number"
           },
           "regions": {
             "type": "array",
@@ -8760,6 +8771,23 @@
           },
           "address": {
             "type": "string"
+          },
+          "price": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "from": {
+                "type": "number"
+              },
+              "to": {
+                "type": "number"
+              }
+            }
           },
           "created_by": {
             "type": "string"
@@ -9646,9 +9674,6 @@
                     "description": {
                       "type": "string"
                     },
-                    "price": {
-                      "type": "number"
-                    },
                     "regions": {
                       "type": "array",
                       "items": {
@@ -9676,6 +9701,9 @@
                     },
                     "address": {
                       "type": "string"
+                    },
+                    "price": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"
@@ -9811,9 +9839,6 @@
                     "description": {
                       "type": "string"
                     },
-                    "price": {
-                      "type": "number"
-                    },
                     "regions": {
                       "type": "array",
                       "items": {
@@ -9841,6 +9866,9 @@
                     },
                     "address": {
                       "type": "string"
+                    },
+                    "price": {
+                      "type": "component"
                     },
                     "created_by": {
                       "type": "string"

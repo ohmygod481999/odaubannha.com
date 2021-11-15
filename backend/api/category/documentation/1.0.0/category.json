@@ -550,9 +550,6 @@
                 "description": {
                   "type": "string"
                 },
-                "price": {
-                  "type": "number"
-                },
                 "regions": {
                   "type": "array",
                   "items": {
@@ -580,6 +577,9 @@
                 },
                 "address": {
                   "type": "string"
+                },
+                "price": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"

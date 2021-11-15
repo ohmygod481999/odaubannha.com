@@ -19,9 +19,6 @@
       "type": "text",
       "required": true
     },
-    "price": {
-      "type": "float"
-    },
     "regions": {
       "collection": "region"
     },
@@ -56,6 +53,11 @@
     },
     "address": {
       "type": "string"
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "order.price"
     }
   }
 }

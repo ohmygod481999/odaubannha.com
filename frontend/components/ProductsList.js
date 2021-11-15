@@ -65,7 +65,12 @@ function ProductsList({ products, categories, regions }) {
       // filtered on price
       case categori === "all" && region === "all": {
         const result = filterDatas.filter((filterData) => {
-          return filterData.price >= price.min && filterData.price < price.max;
+          return (
+            (filterData.price.from >= price.min &&
+              filterData.price.from < price.max) ||
+            (filterData.price.to <= price.max &&
+              filterData.price.to > price.min)
+          );
         });
         setProductsData(result);
         break;
@@ -116,8 +121,10 @@ function ProductsList({ products, categories, regions }) {
           );
           if (
             checkCategoriFilteredData &&
-            filterData.price >= price.min &&
-            filterData.price < price.max
+            ((filterData.price.from >= price.min &&
+              filterData.price.from < price.max) ||
+              (filterData.price.to <= price.max &&
+                filterData.price.to > price.min))
           ) {
             return filterData;
           }
@@ -134,8 +141,10 @@ function ProductsList({ products, categories, regions }) {
           );
           if (
             checkRegionFilteredData &&
-            filterData.price >= price.min &&
-            filterData.price < price.max
+            ((filterData.price.from >= price.min &&
+              filterData.price.from < price.max) ||
+              (filterData.price.to <= price.max &&
+                filterData.price.to > price.min))
           ) {
             return filterData;
           }
@@ -157,8 +166,10 @@ function ProductsList({ products, categories, regions }) {
             if (
               checkCategoriFilteredData &&
               checkRegionFilteredData &&
-              filterData.price >= price.min &&
-              filterData.price < price.max
+              ((filterData.price.from >= price.min &&
+                filterData.price.from < price.max) ||
+                (filterData.price.to <= price.max &&
+                  filterData.price.to > price.min))
             ) {
               return filterData;
             }
@@ -425,8 +436,22 @@ function ProductsList({ products, categories, regions }) {
 
                               <div className="property-cost color-white list-half w-100">
                                 <ul>
-                                  <li></li>
-                                  <li>{formatMoney(price)} </li>
+                                  <li style={{ width: "30%" }}></li>
+                                  <li
+                                    style={{
+                                      width: "70%",
+                                      padding: 0,
+                                      textAlign: "center",
+                                      display: "flex",
+                                      alignItems: "center"
+                                    }}
+                                  >
+                                    <p>
+                                      {`${formatMoney(
+                                        price.from
+                                      )} -  ${formatMoney(price.to)}`}
+                                    </p>
+                                  </li>
                                 </ul>
                               </div>
                             </div>
@@ -492,7 +517,9 @@ function ProductsList({ products, categories, regions }) {
                                 <div className="hover-content py-30 px-20 overlay-hover-gradient">
                                   <div className="thumbnail-title z-index-1 position-relative">
                                     <span className="thumbnail-price bg-white color-secondary px-15 mb-10 d-table">
-                                      {formatMoney(price)}
+                                      {`${price.from} -  ${formatMoney(
+                                        price.to
+                                      )}`}
                                     </span>
                                     <a
                                       className="color-secondary mb-5"
@@ -625,8 +652,22 @@ function ProductsList({ products, categories, regions }) {
                                 </span>
                                 <div className="property-cost color-white list-half w-100">
                                   <ul>
-                                    <li></li>
-                                    <li>{formatMoney(price)}</li>
+                                    <li style={{ width: "30%" }}></li>
+                                    <li
+                                      style={{
+                                        width: "70%",
+                                        padding: 0,
+                                        textAlign: "center",
+                                        display: "flex",
+                                        alignItems: "center"
+                                      }}
+                                    >
+                                      <p>
+                                        {`${formatMoney(
+                                          price.from
+                                        )} -  ${formatMoney(price.to)}`}
+                                      </p>
+                                    </li>
                                   </ul>
                                 </div>
                               </div>
