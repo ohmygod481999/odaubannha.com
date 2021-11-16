@@ -4,8 +4,7 @@ import axios from "axios";
 
 export function getStrapiURL(path) {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL ||
-    "https://admin.odaubannha.com"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://admin.odaubannha.com"
   }${path}`;
 }
 
@@ -41,6 +40,17 @@ export async function fetchAPI(path) {
     return {};
   }
 }
+//========= post form ================
+export const postDataForm = async (dataForm) => {
+  try {
+    const fullUrl = getStrapiURL("/customers");
+    const res = await axios.post(fullUrl, dataForm);
+    const data = await res.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 //========= old code - will be changed ===============
 
 export async function postAPI(path, body) {
