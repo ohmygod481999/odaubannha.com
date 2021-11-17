@@ -3,8 +3,8 @@ import { formatMoney } from "../../utils/common";
 import { getStrapiImage } from "../../utils/medias";
 
 function HightlightProject({ HightlightProject }) {
-  const { highlight_project } = HightlightProject;
-  const { title, subtitle, descirption, highlight_list } = highlight_project;
+  const { highlight_project, products } = HightlightProject;
+  const { title, subtitle, description } = highlight_project;
   return (
     <section>
       <div className="container">
@@ -15,11 +15,11 @@ function HightlightProject({ HightlightProject }) {
                 {subtitle}
               </span>
               <h2 className="title mb-20 color-secondary">{title}</h2>
-              <span className="sub-title">{descirption}</span>
+              <span className="sub-title">{description}</span>
             </div>
           </div>
-          {highlight_list.map((project, i) => {
-            console.log(project);
+          {products.map((project, i) => {
+            console.log(project.price);
             return (
               <div
                 key={project.id}
@@ -27,7 +27,7 @@ function HightlightProject({ HightlightProject }) {
               >
                 <div className="property-thumbnail mt-30">
                   <div className="property-img position-relative overflow-hidden overlay-secondary-4">
-                    <img src={getStrapiImage(project.image[0])} alt="image" />
+                    <img src={getStrapiImage(project.image)} alt="image" />
                     <div className="thumbnail-content z-index-1 color-white-a color-white">
                       <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
                         For Sale
@@ -60,7 +60,9 @@ function HightlightProject({ HightlightProject }) {
                       <div className="hover-content py-30 px-20 overlay-hover-gradient">
                         <div className="thumbnail-title z-index-1 position-relative">
                           <span className="thumbnail-price bg-white color-secondary px-15 mb-10 d-table">
-                            {formatMoney(project.price)}
+                            {formatMoney(project.price.from) +
+                              "-" +
+                              formatMoney(project.price.to)}
                           </span>
                           <a
                             className="color-secondary mb-5"
