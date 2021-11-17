@@ -29,11 +29,6 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
-    },
-    "highlight_project": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home-page.highlight-project"
     }
   }
 }

@@ -147,7 +147,7 @@ export default function Home({ homePage, categories, generalInfo }) {
       />
       <About1 homePage={homePage} />
       <Promotion />
-      <HightlightProject HightlightProject={homePage} />
+      <HightlightProject />
       <Testimonial />
       <Partner />
       {/* <Menu2 categories={categories} />
