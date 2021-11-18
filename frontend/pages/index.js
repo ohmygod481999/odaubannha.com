@@ -149,7 +149,7 @@ export default function Home({ homePage, categories, generalInfo }) {
       <Promotion />
       <HightlightProject HightlightProject={homePage} />
       <Testimonial />
-      <Partner />
+      <Partner Partners={homePage} />
       {/* <Menu2 categories={categories} />
             <About2
                 title={_.get(homePage, "aboutus2.title")}
