@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_banner_home_pages",
+  "info": {
+    "name": "banner_home_page",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.slide"
+    }
+  }
+}
