@@ -9,17 +9,17 @@ module.exports = {
   async findOne(ctx) {
     const { id } = ctx.params;
     const entity = await strapi.services.article.findOne({ id });
-    entity.description = entity.description.replace(
-      /\!\[.*\]\((.*)\)/g,
-      (match) => {
-        return match.replace(/\((.*)\)/, (match2) => {
-          return `(${strapi.config.get("server.url")}${match2.slice(
-            1,
-            match2.length - 1
-          )})`;
-        });
-      }
-    );
+    // entity.description = entity.description.replace(
+    //   /\!\[.*\]\((.*)\)/g,
+    //   (match) => {
+    //     return match.replace(/\((.*)\)/, (match2) => {
+    //       return `(${strapi.config.get("server.url")}${match2.slice(
+    //         1,
+    //         match2.length - 1
+    //       )})`;
+    //     });
+    //   }
+    // );
 
     return sanitizeEntity(entity, { model: strapi.models.article });
   },
@@ -33,16 +33,17 @@ module.exports = {
     const result = entities.map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.article })
     );
-    return result.map((article) => ({
-      ...article,
-      description: article.description.replace(/\!\[.*\]\((.*)\)/g, (match) => {
-        return match.replace(/\((.*)\)/, (match2) => {
-          return `(${strapi.config.get("server.url")}${match2.slice(
-            1,
-            match2.length - 1
-          )})`;
-        });
-      }),
-    }));
+    return result
+    // return result.map((article) => ({
+    //   ...article,
+    //   description: article.description.replace(/\!\[.*\]\((.*)\)/g, (match) => {
+    //     return match.replace(/\((.*)\)/, (match2) => {
+    //       return `(${strapi.config.get("server.url")}${match2.slice(
+    //         1,
+    //         match2.length - 1
+    //       )})`;
+    //     });
+    //   }),
+    // }));
   },
 };
