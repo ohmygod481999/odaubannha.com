@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CommentInArticle from "./CommentInArticle";
 import { getStrapiURL } from "../../utils/api";
 import { getStrapiImage } from "../../utils/medias";
@@ -18,9 +18,8 @@ import {
 function BlogDetail({ article, articlesData }) {
   const { title, description, image, created_at } = article;
   // let htmlDescription;
-  // useEffect(() => {
-  //   htmlDescription = convertMarkdownToHtml(description);
-  // }, []);
+  const [htmlDescription, setHtmlDescription] = useState(convertMarkdownToHtml(description))
+
   const random = articlesData
     .filter((x) => x.id !== article.id)
     .sort(() => 0.5 - Math.random())
@@ -57,7 +56,7 @@ function BlogDetail({ article, articlesData }) {
                   className={`mb-15 wow slideInUp animated`}
                   // dangerouslySetInnerHTML={{ __html: htmlDescription }}
                 >
-                  {ReactHtmlParser(description)}
+                  {ReactHtmlParser(htmlDescription)}
                 </p>
 
                 <div className="share bg-gray p-30 mt-30 wow slideInUp animated">
