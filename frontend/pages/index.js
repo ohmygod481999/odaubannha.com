@@ -140,15 +140,11 @@ export default function Home({ homePage, categories, generalInfo }) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <Banner2
-      // title={_.get(homePage, "title")}
-      // description={_.get(homePage, "description")}
-      // image_url={_.get(homePage, "image.url")}
-      />
+      <Banner2 bannerData={homePage} />
       <About1 homePage={homePage} />
       <Promotion />
       <HightlightProject HightlightProject={homePage} />
-      <Testimonial />
+      <Testimonial feedback={homePage} />
       <Partner Partners={homePage} />
       {/* <Menu2 categories={categories} />
             <About2

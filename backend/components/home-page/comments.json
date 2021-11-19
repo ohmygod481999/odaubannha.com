@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_home_page_comments",
+  "info": {
+    "name": "comments",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name1": {
+      "type": "string"
+    },
+    "image1": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "content1": {
+      "type": "richtext"
+    },
+    "name2": {
+      "type": "string"
+    },
+    "content2": {
+      "type": "richtext"
+    },
+    "image2": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
