@@ -1,8 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { getStrapiImage } from "../utils/medias";
+import { getStrapiURL } from "../utils/api";
 import { formatDate, formatMoney } from "../utils/common";
 import { parseISO } from "date-fns";
+import axios from "axios";
+import { useRouter } from "next/router";
 function ProductsList({ products, categories, regions }) {
+  const router = useRouter();
   const initialFilter = {
     categori: "all",
     region: "all",
@@ -10,9 +14,13 @@ function ProductsList({ products, categories, regions }) {
   };
   const [styleShow, setStyleShow] = useState(1);
   const [originProducts, setOriginProducts] = useState(products);
+  const [flag, setFlag] = useState(false);
+  const [clone, setClone] = useState([]);
   const [productsData, setProductsData] = useState(originProducts);
   const [condition, setCondition] = useState(initialFilter);
   const [sort, setSort] = useState("newest");
+  const [searchValue, setSearchValue] = useState("");
+  const [check, setCheck] = useState(false);
   const _changeFilter = (key) => (e) => {
     setCondition((prev) => ({ ...prev, [key]: e.target.value }));
   };
@@ -53,6 +61,59 @@ function ProductsList({ products, categories, regions }) {
     },
     [sort]
   );
+  const _handleChangeSearch = (e) => setSearchValue(e.target.value);
+  const _searchApi = async (value) => {
+    try {
+      const formatValue = `/products?_where[0][title_contains]=${value}`;
+      const fulLurl = getStrapiURL(formatValue);
+      const res = await axios.get(fulLurl);
+      const dataRes = await res.data;
+      setProductsData(dataRes);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const _handleSubmitSearch = (e) => {
+    e.preventDefault();
+    setCheck(true);
+    setFlag(true);
+    if (searchValue.trim()) {
+      router.push(`/projects?title=${searchValue}`, undefined, {
+        shallow: true
+      });
+    } else {
+      router.push(`/projects`, undefined, {
+        shallow: true
+      });
+    }
+  };
+  useEffect(() => {
+    setClone(originProducts);
+    if (flag) {
+      setClone(productsData);
+    }
+  }, [flag]);
+  useEffect(() => {
+    if (check) {
+      if (searchValue.trim()) {
+        _searchApi(searchValue);
+      } else {
+        setProductsData(clone);
+        setFlag(false);
+      }
+    }
+    setCheck(false);
+  }, [check]);
+  useEffect(() => {
+    if (router.query && router.query?.title) {
+      _searchApi(router.query.title);
+      setSearchValue(router.query.title);
+    } else {
+      setProductsData(clone);
+      setFlag(false);
+    }
+  }, [router.query]);
+
   useEffect(() => {
     const { categori, region, price } = condition;
     const filterDatas = [...originProducts];
@@ -182,7 +243,7 @@ function ProductsList({ products, categories, regions }) {
   useEffect(() => {
     const cloneProducts = [...productsData];
     const result = _handleSortByTime(cloneProducts, "new");
-    console.log(result);
+
     setProductsData(result);
   }, [sort, _handleSortByTime]);
   return (
@@ -264,7 +325,39 @@ function ProductsList({ products, categories, regions }) {
             </div>
           </div>
           <div className="col-md-12 col-lg-4">
-            <form className="adbanced-form-two amenities-list bg-white py-40 px-30 mt-30">
+            <div className=" adbanced-form-two  bg-white  px-30 mt-30">
+              <div className="row ">
+                <div className="form-group col-lg-12 pt-15 wow slideInDown animated">
+                  <label>Tìm kiếm dự án: </label>
+                  <div className=" position-relative mt-5">
+                    <form
+                      className="news-letter"
+                      onSubmit={_handleSubmitSearch}
+                    >
+                      <div className="form-group position-relative">
+                        <input
+                          className=" search form-control"
+                          type="search"
+                          placeholder="Tên dự án"
+                          value={searchValue}
+                          onChange={_handleChangeSearch}
+                        />
+                        <button
+                          type="submit"
+                          className="bg-gray color-secondary"
+                        >
+                          <i className="fa fa-paper-plane" />
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form
+              className="adbanced-form-two amenities-list bg-white  px-30  "
+              style={{ paddingBottom: 0 }}
+            >
               <div className="row">
                 <div className="form-group col-lg-12 pt-15 wow slideInDown animated">
                   <label>Loại nhà</label>
