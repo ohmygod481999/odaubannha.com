@@ -7,7 +7,8 @@ function Search() {
   const _handleChange = (e) => setValue(e.target.value);
   const _handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/projects?title=${value}`);
+    if (!value) return
+    window.location.href = `/projects?title=${value}`
   };
   return (
     <div className="header-src-fild bg-secondary py-5">
@@ -19,7 +20,7 @@ function Search() {
               onSubmit={_handleSubmit}
             >
               <div className="row">
-                <div className="form-group  position-relative col-lg-4 col-md-5 mx-auto">
+                <div className="form-group  position-relative col-lg-8 col-md-8 mx-auto">
                   <input
                     className="form-control mt-sm-15"
                     type="text"
@@ -29,7 +30,7 @@ function Search() {
                     onChange={_handleChange}
                   />
                   <button type="submit" className="bg-gray color-secondary">
-                    <i className="fa fa-paper-plane" />
+                    <i className="fa fa-search" />
                   </button>
                 </div>
               </div>
