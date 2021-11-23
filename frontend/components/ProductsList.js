@@ -89,10 +89,21 @@ function ProductsList({ products, categories, regions }) {
   };
   useEffect(() => {
     setClone(originProducts);
-    if (flag) {
+    if (flag === true) {
       setClone(productsData);
     }
   }, [flag]);
+
+  useEffect(() => {
+    if (router.query && router.query?.title) {
+      _searchApi(router.query.title);
+      setSearchValue(router.query.title);
+    } else {
+      setProductsData(clone);
+
+      setFlag(false);
+    }
+  }, [router.query]);
   useEffect(() => {
     if (check) {
       if (searchValue.trim()) {
@@ -104,16 +115,6 @@ function ProductsList({ products, categories, regions }) {
     }
     setCheck(false);
   }, [check]);
-  useEffect(() => {
-    if (router.query && router.query?.title) {
-      _searchApi(router.query.title);
-      setSearchValue(router.query.title);
-    } else {
-      setProductsData(clone);
-      setFlag(false);
-    }
-  }, [router.query]);
-
   useEffect(() => {
     const { categori, region, price } = condition;
     const filterDatas = [...originProducts];
