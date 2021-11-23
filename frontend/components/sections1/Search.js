@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Search() {
   const router = useRouter();
@@ -7,9 +7,16 @@ function Search() {
   const _handleChange = (e) => setValue(e.target.value);
   const _handleSubmit = (e) => {
     e.preventDefault();
-    if (!value) return
-    window.location.href = `/projects?title=${value}`
+    router.push(`/projects?title=${value}`, undefined, {
+      shallow: true
+    });
   };
+  useEffect(() => {
+    const handleRouteChange = () => {
+      router.reload();
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+  }, [router.asPath]);
   return (
     <div className="header-src-fild bg-secondary py-5">
       <div className="container">
