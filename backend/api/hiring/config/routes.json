@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hiring",
+      "handler": "hiring.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hiring",
+      "handler": "hiring.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hiring",
+      "handler": "hiring.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

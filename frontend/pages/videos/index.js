@@ -6,12 +6,11 @@ import Banner from "../../components/Banner";
 import Head from "next/head";
 
 function Videos({ videos, videoBanner }) {
-  console.log(videoBanner);
   return (
     <div>
-    <Head>
+      <Head>
         <title>{videoBanner.title}</title>
-    </Head>
+      </Head>
       <Banner bannerData={videoBanner} />
       <Video videos={videos} />
     </div>

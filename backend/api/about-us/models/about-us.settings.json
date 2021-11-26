@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "name": "about-us",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.section1"
+    },
+    "section2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about-page.section2"
+    }
+  }
+}
