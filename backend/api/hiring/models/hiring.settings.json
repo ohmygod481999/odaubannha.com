@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "hirings",
+  "info": {
+    "name": "hiring"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faq"
+    }
+  }
+}

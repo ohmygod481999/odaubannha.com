@@ -18,7 +18,9 @@ import {
 function BlogDetail({ article, articlesData }) {
   const { title, description, image, created_at } = article;
   // let htmlDescription;
-  const [htmlDescription, setHtmlDescription] = useState(convertMarkdownToHtml(description))
+  const [htmlDescription, setHtmlDescription] = useState(
+    convertMarkdownToHtml(description)
+  );
 
   const random = articlesData
     .filter((x) => x.id !== article.id)
@@ -130,7 +132,7 @@ function BlogDetail({ article, articlesData }) {
               {/* Recent News */}
               <div className="widget py-50 px-30 bg-white mt-50 shadow wow slideInDown animated">
                 <h3 className="color-secondary line-bottom pb-15 mb-30">
-                  Bài viết tương tự
+                  Recent news
                 </h3>
                 <ul className="widget-news">
                   {random.map((article) => {

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_page_child_contents",
+  "info": {
+    "name": "ChildContent",
+    "icon": "box-open"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

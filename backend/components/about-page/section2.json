@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_about_page_section2s",
+  "info": {
+    "name": "section2",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "ChildContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.child-content"
+    }
+  }
+}

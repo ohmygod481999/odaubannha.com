@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_faq_faqs",
+  "info": {
+    "name": "faq",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

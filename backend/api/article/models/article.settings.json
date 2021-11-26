@@ -36,6 +36,9 @@
     },
     "article_categories": {
       "collection": "article-category"
+    },
+    "subdescription": {
+      "type": "text"
     }
   }
 }

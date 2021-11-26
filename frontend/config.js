@@ -9,7 +9,7 @@ export const navs = [
   },
   {
     name: "About us",
-    path: "/about"
+    path: "/aboutUs"
   },
   {
     name: "Dự án",
