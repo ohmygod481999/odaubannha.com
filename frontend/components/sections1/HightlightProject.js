@@ -19,11 +19,10 @@ function HightlightProject({ HightlightProject }) {
             </div>
           </div>
           {products.map((project, i) => {
-            console.log(project.price);
             return (
               <div
                 key={project.id}
-                className="col-md-12 col-lg-6 col-xl-4 wow animated slideInRight"
+                className="col-md-12 col-lg-6 col-xl-4 wow animated slideInUp"
               >
                 <div className="property-thumbnail mt-30">
                   <div className="property-img position-relative overflow-hidden overlay-secondary-4">

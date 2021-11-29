@@ -477,6 +477,9 @@
               },
               "subtitle": {
                 "type": "string"
+              },
+              "signName": {
+                "type": "string"
               }
             }
           },
@@ -681,6 +684,9 @@
                 "type": "integer"
               },
               "subtitle": {
+                "type": "string"
+              },
+              "signName": {
                 "type": "string"
               }
             }

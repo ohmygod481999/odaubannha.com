@@ -2,7 +2,6 @@ import React from "react";
 import { getStrapiImage } from "../utils/medias";
 
 function AboutUs({ aboutUsData }) {
-  console.log(aboutUsData);
   const { section1, section2 } = aboutUsData;
   return (
     <div>
@@ -40,7 +39,7 @@ function AboutUs({ aboutUsData }) {
                       src={getStrapiImage(section1.imageSign)}
                       alt="Images not found!"
                     />
-                    <span>admin</span>
+                    <span>{section1.signName}</span>
                   </div>
                 </div>
               </div>

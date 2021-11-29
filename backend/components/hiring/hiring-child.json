@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_hiring_hiring_children",
+  "info": {
+    "name": "hiringChild",
+    "icon": "battery-full"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    }
+  }
+}
