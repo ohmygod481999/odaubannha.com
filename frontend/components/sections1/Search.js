@@ -29,14 +29,18 @@ function Search() {
               <div className="row">
                 <div className="form-group  position-relative col-lg-8 col-md-8 mx-auto">
                   <input
-                    className="form-control mt-sm-15"
+                    className="form-control "
                     type="text"
                     name="address"
                     placeholder="Tìm kiếm dự án"
                     value={value}
                     onChange={_handleChange}
                   />
-                  <button type="submit" className="bg-gray color-secondary">
+                  <button
+                    type="submit"
+                    className="bg-gray color-secondary"
+                    style={{ right: "15px" }}
+                  >
                     <i className="fa fa-search" />
                   </button>
                 </div>

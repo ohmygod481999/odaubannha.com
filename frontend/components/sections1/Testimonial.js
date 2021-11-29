@@ -1,9 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getStrapiImage } from "../../utils/medias";
 
 function Testimonial({ feedback }) {
   const { testimonial } = feedback;
   const { title, subtitle, description, comments } = testimonial;
+  const [height, setHeight] = useState("460px");
+  const [style, setStyle] = useState({
+    image: {
+      width: 160,
+      height: 160
+    },
+    h3: {
+      fontSize: "20px"
+    },
+    content: {
+      fontSize: "16px"
+    }
+  });
+  const reSize = (size, style) => {
+    setHeight(size);
+    setStyle(style);
+  };
+  useEffect(() => {
+    if (window.innerWidth <= 550) {
+      reSize("600px", {
+        image: {
+          width: 200,
+          height: 200
+        },
+        h3: {
+          fontSize: "20px"
+        },
+        content: {
+          fontSize: "20px"
+        }
+      });
+    } else {
+      reSize("460px", {
+        image: {
+          width: 160,
+          height: 160
+        },
+        h3: {
+          fontSize: "20px"
+        },
+        content: {
+          fontSize: "16px"
+        }
+      });
+    }
+    window.addEventListener("resize", reSize);
+    // reSize();
+  }, []);
   return (
     <section className="bg-gray pb-0">
       <div className="container">
@@ -21,8 +69,8 @@ function Testimonial({ feedback }) {
             className="wow animated slideInDown"
             id="layer-testimonial"
             style={{
-              width: "1280px",
-              height: "360px",
+              width: "100vw",
+              height: height,
               margin: "0 auto",
               marginBottom: "0px",
               backgroundColor: "#242424"
@@ -37,8 +85,8 @@ function Testimonial({ feedback }) {
                   data-ls="duration:4000; kenburnsscale:1.2;"
                 >
                   <img
-                    width={160}
-                    height={160}
+                    width={style?.image.width || 200}
+                    height={style?.image.height || 200}
                     src={getStrapiImage(image1[0])}
                     className="ls-l"
                     alt=""
@@ -65,7 +113,7 @@ function Testimonial({ feedback }) {
                   <p
                     style={{
                       width: "320px",
-                      fontSize: "16px",
+                      fontSize: `${style?.content.fontSize}`,
                       fontFamily: '"Roboto"',
                       lineHeight: "30px",
                       top: "135px",
@@ -79,8 +127,8 @@ function Testimonial({ feedback }) {
                     {content1}
                   </p>
                   <img
-                    width={160}
-                    height={160}
+                    width={style?.image.width || 200}
+                    height={style?.image.height || 200}
                     src={getStrapiImage(image2[0])}
                     className="ls-l"
                     alt=""
@@ -107,7 +155,7 @@ function Testimonial({ feedback }) {
                   <p
                     style={{
                       width: "330px",
-                      fontSize: "16px",
+                      fontSize: `${style?.content.fontSize}`,
                       fontFamily: '"Roboto"',
                       lineHeight: "30px",
                       top: "215px",

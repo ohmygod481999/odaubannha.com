@@ -42,6 +42,9 @@
     },
     "subtitle": {
       "type": "string"
+    },
+    "signName": {
+      "type": "string"
     }
   }
 }
