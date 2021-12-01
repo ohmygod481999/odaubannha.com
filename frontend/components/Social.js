@@ -5,17 +5,17 @@ function Social({ facebook, instagram, viber, zalo }) {
     <div className={styles.social}>
       <a href={facebook ? facebook : "#"} className={styles.social__icon}>
         <img
-          src="images/facebook.png"
+          src="images/facebook-round.png"
           alt="facebook"
           className={styles.image}
         />
       </a>
       <a href={zalo ? zalo : "#"} className={styles.social__icon}>
-        <img src="images/zalo.png" alt="zalo" className={styles.image} />
+        <img src="images/zalo-round.png" alt="zalo" className={styles.image} />
       </a>
       <a href={instagram ? instagram : "#"} className={styles.social__icon}>
         <img
-          src="images/instagram.png"
+          src="images/insta-round.png"
           alt="instagram"
           className={styles.image}
         />

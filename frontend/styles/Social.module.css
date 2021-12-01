@@ -1,6 +1,6 @@
 .social {
   position: fixed;
-  top: 50%;
+  bottom: 100px;
   right: 30px;
   z-index: 99999999;
 }
@@ -10,7 +10,7 @@
   height: 40px;
   outline: none;
   margin-bottom: 1rem;
-  border-radius: 120%;
+  border-radius: 100%;
   overflow: hidden;
   cursor: pointer;
 }
