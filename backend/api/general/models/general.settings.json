@@ -50,6 +50,18 @@
     },
     "address": {
       "type": "string"
+    },
+    "facebookUrl": {
+      "type": "text"
+    },
+    "zaloUrl": {
+      "type": "text"
+    },
+    "instagramUrl": {
+      "type": "string"
+    },
+    "viberUrl": {
+      "type": "text"
     }
   }
 }

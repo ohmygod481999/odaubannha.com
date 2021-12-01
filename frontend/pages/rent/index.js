@@ -2,20 +2,31 @@ import React from "react";
 import Banner from "../../components/Banner";
 import { fetchAPI } from "../../utils/api";
 import Rents from "../../components/Rents";
-function Rent({ rentData }) {
+import Social from "../../components/Social";
+function Rent({ rentData, generalInfo }) {
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Banner bannerData={rentData}></Banner>
       <Rents rentData={rentData} />
+      <Social
+        facebook={generalInfo.facebookUrl}
+        instagram={generalInfo.instagramUrl}
+        viber={generalInfo.viberUrl}
+        zalo={generalInfo.zaloUrl}
+      />
     </div>
   );
 }
 export const getServerSideProps = async () => {
-  const rentData = await fetchAPI("/rent");
+  const [rentData, generalInfo] = await Promise.all([
+    fetchAPI("/rent"),
+    fetchAPI("/general")
+  ]);
 
   return {
     props: {
-      rentData
+      rentData,
+      generalInfo
     }
   };
 };
