@@ -101,9 +101,11 @@ function ModalPromotion({ imgUrl, href }) {
           type: "reset"
         });
         setCheckSubmit(false);
-      }, 3000);
+        $("#exampleModal").modal("hide");
+      }, 1000);
     }
   }, [checkSummit]);
+
   useEffect(() => {
     if (typeof window !== undefined) {
       const { $ } = window;
@@ -112,6 +114,8 @@ function ModalPromotion({ imgUrl, href }) {
       }, 5000);
     }
   }, []);
+
+  
   return (
     <div>
       <div
@@ -128,17 +132,17 @@ function ModalPromotion({ imgUrl, href }) {
         >
           <div
             className="modal-content"
-            style={{ overflow: "hidden", border: "none" }}
+            // style={{ overflow: "hidden", border: "none" }}
           >
             <div className="modal-body p-0 m-9">
               <div className="row">
                 <div className="col-md-12 col-lg-12 col-xl-12 ">
-                  <div className="newletter-2 py-80 px-30 bg-primary md-mt-0 color-white">
+                  <div className="newletter-2 pt-30 pb-50 px-30 bg-primary md-mt-0 color-white">
                     <h3 className="color-white mb-20">
                       Đăng ký ngay nhận ngay thông tin!
                     </h3>
                     <form
-                      className="news-letter bg-gray mt-30"
+                      className=" bg-gray mt-30"
                       style={{ backgroundColor: "#fd9834" }}
                       onSubmit={_handleSubmit}
                     >
@@ -180,9 +184,10 @@ function ModalPromotion({ imgUrl, href }) {
                         {!checkSummit && (
                           <button
                             type="submit"
-                            className="bg-gray color-secondary"
-                            style={{ left: 0 }}
+                            className="btn bg-gray color-secondary px-4"
+                            // style={{ width: 0 }}
                           >
+                            Submit{" "}
                             <i className="fa fa-paper-plane" />
                           </button>
                         )}
