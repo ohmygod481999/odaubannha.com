@@ -126,7 +126,7 @@ export default function Home({ homePage, categories, generalInfo }) {
   // }
 
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Head>
         <title>{generalInfo && generalInfo.title}</title>
         <meta
@@ -140,6 +140,7 @@ export default function Home({ homePage, categories, generalInfo }) {
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <ModalPromotion />
       <Search />
       <Banner2 bannerData={homePage} />
       <About1 homePage={homePage} />

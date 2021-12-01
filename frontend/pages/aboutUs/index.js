@@ -3,11 +3,7 @@ import AboutUs from "../../components/AboutUs";
 import { fetchAPI } from "../../utils/api";
 
 function About({ aboutUsData }) {
-  return (
-    <div>
-      <AboutUs aboutUsData={aboutUsData} />
-    </div>
-  );
+  return <AboutUs aboutUsData={aboutUsData} />;
 }
 export const getServerSideProps = async () => {
   const aboutUsData = await fetchAPI("/about-us");
