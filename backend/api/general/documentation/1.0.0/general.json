@@ -466,6 +466,18 @@
           },
           "address": {
             "type": "string"
+          },
+          "facebookUrl": {
+            "type": "string"
+          },
+          "zaloUrl": {
+            "type": "string"
+          },
+          "instagramUrl": {
+            "type": "string"
+          },
+          "viberUrl": {
+            "type": "string"
           }
         }
       },
@@ -484,6 +496,18 @@
             "type": "string"
           },
           "address": {
+            "type": "string"
+          },
+          "facebookUrl": {
+            "type": "string"
+          },
+          "zaloUrl": {
+            "type": "string"
+          },
+          "instagramUrl": {
+            "type": "string"
+          },
+          "viberUrl": {
             "type": "string"
           },
           "created_by": {
