@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/03/2021 3:30:08 PM"
+    "x-generation-date": "12/03/2021 4:21:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11934,31 +11934,28 @@
                 "id": {
                   "type": "string"
                 },
-                "utilities": {
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "published_at": {
-                        "type": "string"
-                      },
-                      "created_by": {
-                        "type": "string"
-                      },
-                      "updated_by": {
-                        "type": "string"
-                      }
+                "utility": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
                     }
                   }
                 },
@@ -12037,31 +12034,28 @@
                 "id": {
                   "type": "string"
                 },
-                "utilities": {
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "published_at": {
-                        "type": "string"
-                      },
-                      "created_by": {
-                        "type": "string"
-                      },
-                      "updated_by": {
-                        "type": "string"
-                      }
+                "utility": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
                     }
                   }
                 },

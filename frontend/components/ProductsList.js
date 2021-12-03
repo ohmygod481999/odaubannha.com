@@ -480,12 +480,12 @@ function ProductsList({ products, categories, regions }) {
                           <div className="property-item position-relative mt-30">
                             <div className="property-img position-relative overflow-hidden overlay-secondary-4">
                               <img src={getStrapiImage(image)} alt="image" />
-                              <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
+                              {/* <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
                                 For Sale
                               </span>
                               <span className="thum-category category-2 bg-secondary color-white z-index-1 px-15">
                                 Featured
-                              </span>
+                              </span> */}
                               <ul className="hover-option position-absolute icon-white z-index-1">
                                 <li>
                                   <a
@@ -536,8 +536,9 @@ function ProductsList({ products, categories, regions }) {
                               </span>
                               <ul className="about-property list-half icon-primary d-table f-14 mb-30 mt-20">
                                 {information_product.map((info) => {
-                                  const { value, utilities } = info;
-                                  const { title, image } = utilities[0];
+                                  const { value, utility } = info;
+                                  console.log(information_product)
+                                  const { title, image } = utility || {};
                                   return (
                                     <li>
                                       {/* <i className="flaticon-fit-screen" /> */}
@@ -612,9 +613,9 @@ function ProductsList({ products, categories, regions }) {
                             <div className="property-img position-relative overflow-hidden overlay-secondary-4">
                               <img src={getStrapiImage(image)} alt="image" />
                               <div className="thumbnail-content z-index-1 color-white-a color-white">
-                                <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
+                                {/* <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
                                   For Sale
-                                </span>
+                                </span> */}
                                 <ul className="hover-option position-absolute icon-white z-index-1">
                                   <li>
                                     <a
@@ -662,8 +663,8 @@ function ProductsList({ products, categories, regions }) {
                                     </span>
                                     <ul className="about-property icon-primary d-table f-14 z-index-1 position-relative">
                                       {information_product.map((info) => {
-                                        const { value, utilities } = info;
-                                        const { title, image } = utilities[0];
+                                        const { value, utility } = info;
+                                        const { title, image } = utility;
                                         return (
                                           <li>
                                             <span className="color-primary">
@@ -804,8 +805,8 @@ function ProductsList({ products, categories, regions }) {
                                   }}
                                 >
                                   {information_product.map((info) => {
-                                    const { value, utilities } = info;
-                                    const { title, image } = utilities[0];
+                                    const { value, utility } = info;
+                                    const { title, image } = utility;
                                     return (
                                       <li style={{ width: "41%" }}>
                                         {/* <i className="flaticon-fit-screen" /> */}
@@ -825,9 +826,9 @@ function ProductsList({ products, categories, regions }) {
                                     );
                                   })}
                                 </ul>
-                                <span className="tags color-gray mb-30 d-block">
+                                {/* <span className="tags color-gray mb-30 d-block">
                                   Appartment, Bar, Hotel, House
-                                </span>
+                                </span> */}
                                 <div className="property-cost color-white list-half w-100">
                                   <ul>
                                     <li style={{ width: "30%" }}></li>

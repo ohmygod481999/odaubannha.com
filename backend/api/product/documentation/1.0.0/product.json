@@ -711,31 +711,28 @@
                 "id": {
                   "type": "string"
                 },
-                "utilities": {
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "published_at": {
-                        "type": "string"
-                      },
-                      "created_by": {
-                        "type": "string"
-                      },
-                      "updated_by": {
-                        "type": "string"
-                      }
+                "utility": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
                     }
                   }
                 },
@@ -814,31 +811,28 @@
                 "id": {
                   "type": "string"
                 },
-                "utilities": {
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "published_at": {
-                        "type": "string"
-                      },
-                      "created_by": {
-                        "type": "string"
-                      },
-                      "updated_by": {
-                        "type": "string"
-                      }
+                "utility": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
                     }
                   }
                 },
