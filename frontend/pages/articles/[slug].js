@@ -1,14 +1,12 @@
-import Breadcrumb from "../../components/Breadcrumb";
 import BlogDetail from "../../components/sections/BlogDetail";
-import { useEffect } from "react";
-import { getArticles, getArticle } from "../../services/article.service";
+import { getArticle } from "../../services/article.service";
 import Head from "next/head";
 import { getStrapiImage } from "../../utils/medias";
 import { fetchAPI } from "../../utils/api";
-
-function DetailBlog({ article = {}, articlesData }) {
+import Social from "../../components/Social";
+function DetailBlog({ article = {}, articlesData, generalInfo }) {
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Head>
         <title>{article.title}</title>
         <meta property="og:title" content={article.title} key="title" />
@@ -28,6 +26,12 @@ function DetailBlog({ article = {}, articlesData }) {
         />
       </Head>
       <BlogDetail article={article} articlesData={articlesData} />
+      <Social
+        facebook={generalInfo.facebookUrl}
+        instagram={generalInfo.instagramUrl}
+        viber={generalInfo.viberUrl}
+        zalo={generalInfo.zaloUrl}
+      />
     </div>
   );
 }
@@ -35,9 +39,10 @@ function DetailBlog({ article = {}, articlesData }) {
 export default DetailBlog;
 
 export async function getServerSideProps({ params }) {
-  const [article, articlesData] = await Promise.all([
+  const [article, articlesData, generalInfo] = await Promise.all([
     getArticle(params.slug),
-    fetchAPI("/articles")
+    fetchAPI("/articles"),
+    fetchAPI("/general")
   ]);
-  return { props: { article, articlesData } };
+  return { props: { article, articlesData, generalInfo } };
 }

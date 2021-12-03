@@ -1,30 +1,37 @@
 import React from "react";
 import Video from "../../components/sections/Video";
 import { fetchAPI, getVideos } from "../../utils/api";
-import Breadcrumb from "../../components/Breadcrumb";
 import Banner from "../../components/Banner";
 import Head from "next/head";
-
-function Videos({ videos, videoBanner }) {
+import Social from "../../components/Social";
+function Videos({ videos, videoBanner, generalInfo }) {
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Head>
         <title>{videoBanner.title}</title>
       </Head>
       <Banner bannerData={videoBanner} />
       <Video videos={videos} />
+      <Social
+        facebook={generalInfo.facebookUrl}
+        instagram={generalInfo.instagramUrl}
+        viber={generalInfo.viberUrl}
+        zalo={generalInfo.zaloUrl}
+      />
     </div>
   );
 }
 export const getServerSideProps = async () => {
-  const [videos, videoBanner] = await Promise.all([
+  const [videos, videoBanner, generalInfo] = await Promise.all([
     getVideos(),
-    fetchAPI("/video-banner")
+    fetchAPI("/video-banner"),
+    fetchAPI("/general")
   ]);
   return {
     props: {
       videos,
-      videoBanner
+      videoBanner,
+      generalInfo
     }
   };
 };
