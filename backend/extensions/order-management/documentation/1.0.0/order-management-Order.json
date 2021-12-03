@@ -296,6 +296,9 @@
                     "price": {
                       "type": "component"
                     },
+                    "information_product": {
+                      "type": "component"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -459,6 +462,9 @@
                       "type": "string"
                     },
                     "price": {
+                      "type": "component"
+                    },
+                    "information_product": {
                       "type": "component"
                     },
                     "created_by": {

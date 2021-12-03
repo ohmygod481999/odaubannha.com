@@ -21,7 +21,7 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                 return (
                   <div
                     className={`col-md-12 col-lg-6 mb-20 wow ${
-                      index % 2 !== 0 ? "slideInRight" : "slideInLeft"
+                      index % 2 !== 0 ? "slideInDown" : "slideInUp"
                     } animated`}
                     key={article.id}
                   >

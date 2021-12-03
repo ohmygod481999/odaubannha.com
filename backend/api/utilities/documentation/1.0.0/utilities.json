@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/categories": {
+    "/utilities": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the utilities's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Utilities"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new utilities record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Utilities"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewUtilities"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/utilities/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of utilities documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "parameters": []
       }
     },
-    "/categories/{slug}": {
+    "/utilities/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one utilities record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Utilities"
                 }
               }
             }
@@ -359,11 +359,11 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -373,19 +373,17 @@
             }
           }
         ]
-      }
-    },
-    "/categories/{id}": {
+      },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single utilities record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Utilities"
                 }
               }
             }
@@ -423,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "requestBody": {
           "description": "",
@@ -431,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewUtilities"
               }
             }
           }
@@ -451,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single utilities record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single utilities based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -497,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Utilities"
         ],
         "parameters": [
           {
@@ -516,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Utilities": {
         "required": [
           "id"
         ],
@@ -524,76 +522,7 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "image",
-                "status"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "regions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "image": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "status": {
-                  "type": "string",
-                  "enum": [
-                    "draft",
-                    "published"
-                  ]
-                },
-                "address": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "component"
-                },
-                "information_product": {
-                  "type": "component"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "description": {
+          "title": {
             "type": "string"
           },
           "image": {
@@ -662,25 +591,21 @@
                 "type": "string"
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewCategory": {
+      "NewUtilities": {
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
           },
-          "slug": {
-            "type": "uid"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "description": {
-            "type": "string"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -694,7 +619,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Utilities"
     }
   ]
 }

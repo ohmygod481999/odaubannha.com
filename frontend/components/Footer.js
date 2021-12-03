@@ -108,7 +108,7 @@ function Footer({ generalInfo }) {
     }
   }, [checkSummit]);
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <footer
         className="footer-2 bg-secondary py-80 border-bottom-1-dark"
         style={{ marginTop: "80px" }}

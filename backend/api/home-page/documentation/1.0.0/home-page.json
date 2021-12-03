@@ -477,6 +477,9 @@
                 "price": {
                   "type": "component"
                 },
+                "information_product": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -788,9 +791,6 @@
                     "title": {
                       "type": "string"
                     },
-                    "description": {
-                      "type": "string"
-                    },
                     "address": {
                       "type": "string"
                     },
@@ -863,6 +863,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "description": {
+                      "type": "string"
                     }
                   }
                 }
@@ -1288,9 +1291,6 @@
                     "title": {
                       "type": "string"
                     },
-                    "description": {
-                      "type": "string"
-                    },
                     "address": {
                       "type": "string"
                     },
@@ -1363,6 +1363,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "description": {
+                      "type": "string"
                     }
                   }
                 }

@@ -4,7 +4,7 @@ import { getStrapiImage } from "../utils/medias";
 function AboutUs({ aboutUsData }) {
   const { section1, section2 } = aboutUsData;
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <section className="p-0 bg-light">
         <div className="container-fluid">
           <div className="row">
@@ -31,7 +31,7 @@ function AboutUs({ aboutUsData }) {
             </div>
             <div className="col-md-12 col-lg-6">
               <div className="row">
-                <div className="best-help py-80 bg-primary px-30 color-white wow slideInRight animated">
+                <div className="best-help py-80 bg-primary px-30 color-white wow slideInDown animated">
                   <h2 className="color-secondary mb-30">{section1.title}</h2>
                   <p className="mt-15 mb-15">{section1.description}</p>
                   <div style={{ width: 250, height: "auto" }}>
@@ -68,7 +68,7 @@ function AboutUs({ aboutUsData }) {
             </div>
             {section2.ChildContent.map((item) => {
               return (
-                <div className="col-md-6 col-lg-4 wow slideInRight animated">
+                <div className="col-md-6 col-lg-4 wow slideInUp animated">
                   <div className="service-item bg-white px-30 py-40 mt-30">
                     <div className="service-info hover-secondery-primary">
                       {/* <span className="flat-large icon-primary">
