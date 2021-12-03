@@ -3,12 +3,11 @@ import React from "react";
 function About1({ homePage }) {
   const { title, description, mission, subtitle, value, vision } =
     homePage.aboutus;
-  console.log(homePage);
   return (
     <section>
       <div className="container">
         <div className="row">
-          <div className="col-md-12 col-lg-6 wow animated slideInLeft">
+          <div className="col-md-12 col-lg-6 wow animated slideInUp">
             <div className="side-title">
               <span className="small-title color-primary position-relative line-primary">
                 {subtitle}
@@ -16,7 +15,7 @@ function About1({ homePage }) {
               <h2 className="title mb-20 color-secondary">{title}</h2>
             </div>
           </div>
-          <div className="col-md-12 col-lg-6 wow animated slideInRight">
+          <div className="col-md-12 col-lg-6 wow animated slideInUp">
             <div className="text-area">
               <p>{description}</p>
             </div>
@@ -24,7 +23,7 @@ function About1({ homePage }) {
           <div className="col-md-12 col-lg-12">
             <div className="property-looking mt-60">
               <div className="row">
-                <div className="col-md-4 wow animated slideInDown">
+                <div className="col-md-4 wow animated slideInDown mb-10">
                   <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
                     <a className="mb-20" href="#">
                       <h4>{vision.title}</h4>
@@ -35,7 +34,7 @@ function About1({ homePage }) {
                     </span>
                   </div>
                 </div>
-                <div className="col-md-4 wow animated slideInUp">
+                <div className="col-md-4 wow animated slideInUp mb-10">
                   <div className="text-thumbnail text-center bg-secondary py-40 px-30 color-white color-white-a">
                     <a className="mb-20" href="#">
                       <h4>{value.title}</h4>
@@ -46,8 +45,8 @@ function About1({ homePage }) {
                     </span>
                   </div>
                 </div>
-                <div className="col-md-4 wow animated slideInDown">
-                  <div className="text-thumbnail text-center bg-secondary py-40 px-30 mt-sm-30 color-white color-white-a">
+                <div className="col-md-4 wow animated slideInDown mb-10">
+                  <div className="text-thumbnail text-center bg-secondary py-40 px-30  color-white color-white-a">
                     <a className="mb-20" href="#">
                       <h4>{mission.title}</h4>
                     </a>

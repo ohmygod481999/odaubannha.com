@@ -461,24 +461,31 @@ function ProductsList({ products, categories, regions }) {
                 >
                   <div className="row">
                     {productsData.map((product, index) => {
-                      const { id, title, price, updated_at, image, address } =
-                        product;
+                      const {
+                        id,
+                        title,
+                        price,
+                        updated_at,
+                        image,
+                        address,
+                        information_product
+                      } = product;
                       return (
                         <div
                           key={id}
                           className={`col-md-12 col-lg-6 wow ${
-                            index % 2 !== 0 ? "slideInLeft" : "slideInRight"
+                            index % 2 !== 0 ? "slideInDown" : "slideInUp"
                           } animated`}
                         >
                           <div className="property-item position-relative mt-30">
                             <div className="property-img position-relative overflow-hidden overlay-secondary-4">
                               <img src={getStrapiImage(image)} alt="image" />
-                              <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
+                              {/* <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
                                 For Sale
                               </span>
                               <span className="thum-category category-2 bg-secondary color-white z-index-1 px-15">
                                 Featured
-                              </span>
+                              </span> */}
                               <ul className="hover-option position-absolute icon-white z-index-1">
                                 <li>
                                   <a
@@ -527,7 +534,29 @@ function ProductsList({ products, categories, regions }) {
                                 <i className="fa fa-map-marker" />
                                 {address}
                               </span>
-
+                              <ul className="about-property list-half icon-primary d-table f-14 mb-30 mt-20">
+                                {information_product.map((info) => {
+                                  const { value, utility } = info;
+                                  console.log(information_product)
+                                  const { title, image } = utility || {};
+                                  return (
+                                    <li>
+                                      {/* <i className="flaticon-fit-screen" /> */}
+                                      <img
+                                        src={getStrapiImage(image)}
+                                        className="flaticon-fit-screen"
+                                        alt=""
+                                        style={{
+                                          display: "inline-block",
+                                          width: "22%",
+                                          marginRight: "0.3rem"
+                                        }}
+                                      />
+                                      {value} {title}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
                               <div className="property-cost color-white list-half w-100">
                                 <ul>
                                   <li style={{ width: "30%" }}></li>
@@ -565,21 +594,28 @@ function ProductsList({ products, categories, regions }) {
                 >
                   <div className="row">
                     {productsData.map((product, index) => {
-                      const { id, title, price, image, address } = product;
+                      const {
+                        id,
+                        title,
+                        price,
+                        image,
+                        address,
+                        information_product
+                      } = product;
                       return (
                         <div
                           key={id}
                           className={`col-md-12 col-lg-6 wow ${
-                            index % 2 === 0 ? "slideInRight" : "slideInLeft"
+                            index % 2 === 0 ? "slideInDown" : "slideInUp"
                           } animated`}
                         >
                           <div className="property-thumbnail mt-30">
                             <div className="property-img position-relative overflow-hidden overlay-secondary-4">
                               <img src={getStrapiImage(image)} alt="image" />
                               <div className="thumbnail-content z-index-1 color-white-a color-white">
-                                <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
+                                {/* <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
                                   For Sale
-                                </span>
+                                </span> */}
                                 <ul className="hover-option position-absolute icon-white z-index-1">
                                   <li>
                                     <a
@@ -625,6 +661,20 @@ function ProductsList({ products, categories, regions }) {
                                       <i className="fa fa-map-marker" />
                                       {address}
                                     </span>
+                                    <ul className="about-property icon-primary d-table f-14 z-index-1 position-relative">
+                                      {information_product.map((info) => {
+                                        const { value, utility } = info;
+                                        const { title, image } = utility;
+                                        return (
+                                          <li>
+                                            <span className="color-primary">
+                                              {value}
+                                            </span>{" "}
+                                            {title}
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
                                   </div>
                                 </div>
                               </div>
@@ -676,8 +726,15 @@ function ProductsList({ products, categories, regions }) {
                 >
                   <div className="row">
                     {productsData.map((product, index) => {
-                      const { id, title, price, image, address, updated_at } =
-                        product;
+                      const {
+                        id,
+                        title,
+                        price,
+                        image,
+                        address,
+                        updated_at,
+                        information_product
+                      } = product;
                       return (
                         <div
                           key={id}
@@ -740,10 +797,38 @@ function ProductsList({ products, categories, regions }) {
                                   <i className="fa fa-map-marker" />
                                   {address}
                                 </span>
-
-                                <span className="tags color-gray mb-30 d-block">
+                                <ul
+                                  className="about-property icon-primary  mt-20"
+                                  style={{
+                                    display: "flex",
+                                    flexWrap: "wrap"
+                                  }}
+                                >
+                                  {information_product.map((info) => {
+                                    const { value, utility } = info;
+                                    const { title, image } = utility;
+                                    return (
+                                      <li style={{ width: "41%" }}>
+                                        {/* <i className="flaticon-fit-screen" /> */}
+                                        <img
+                                          src={getStrapiImage(image)}
+                                          className="flaticon-fit-screen"
+                                          alt=""
+                                          style={{
+                                            display: "inline-block",
+                                            // flex: "0 0 100%",
+                                            width: "20%",
+                                            marginRight: "0.3rem"
+                                          }}
+                                        />
+                                        {value} {title}
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                                {/* <span className="tags color-gray mb-30 d-block">
                                   Appartment, Bar, Hotel, House
-                                </span>
+                                </span> */}
                                 <div className="property-cost color-white list-half w-100">
                                   <ul>
                                     <li style={{ width: "30%" }}></li>
