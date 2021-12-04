@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/general": {
+    "/utilities": {
       "get": {
         "deprecated": false,
-        "description": "Find all the general's records",
+        "description": "Find all the utilities's records",
         "responses": {
           "200": {
-            "description": "Retrieve general document(s)",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/General"
+                    "$ref": "#/components/schemas/Utilities"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "General"
+          "Utilities"
         ],
         "parameters": [
           {
@@ -192,16 +192,16 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single general record",
+        "description": "Create a new utilities record",
         "responses": {
           "200": {
-            "description": "Retrieve general document(s)",
+            "description": "Retrieve utilities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/General"
+                  "$ref": "#/components/schemas/Utilities"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "General"
+          "Utilities"
         ],
         "requestBody": {
           "description": "",
@@ -247,19 +247,212 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewGeneral"
+                "$ref": "#/components/schemas/NewUtilities"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/utilities/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of utilities documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve utilities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Utilities"
+        ],
         "parameters": []
+      }
+    },
+    "/utilities/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one utilities record",
+        "responses": {
+          "200": {
+            "description": "Retrieve utilities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Utilities"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Utilities"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single utilities record",
+        "responses": {
+          "200": {
+            "description": "Retrieve utilities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Utilities"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Utilities"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUtilities"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single general record",
+        "description": "Delete a single utilities record",
         "responses": {
           "200": {
-            "description": "deletes a single general based on the ID supplied",
+            "description": "deletes a single utilities based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,15 +495,26 @@
         },
         "summary": "",
         "tags": [
-          "General"
+          "Utilities"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "General": {
+      "Utilities": {
         "required": [
           "id"
         ],
@@ -321,7 +525,7 @@
           "title": {
             "type": "string"
           },
-          "logo": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -388,127 +592,20 @@
               }
             }
           },
-          "meta_title": {
-            "type": "string"
-          },
-          "meta_description": {
-            "type": "string"
-          },
-          "meta_image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "phone": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "facebookUrl": {
-            "type": "string"
-          },
-          "zaloUrl": {
-            "type": "string"
-          },
-          "instagramUrl": {
-            "type": "string"
-          },
-          "viberUrl": {
-            "type": "string"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewGeneral": {
+      "NewUtilities": {
         "properties": {
           "title": {
             "type": "string"
           },
-          "meta_title": {
-            "type": "string"
-          },
-          "meta_description": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          },
-          "facebookUrl": {
-            "type": "string"
-          },
-          "zaloUrl": {
-            "type": "string"
-          },
-          "instagramUrl": {
-            "type": "string"
-          },
-          "viberUrl": {
-            "type": "string"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -522,7 +619,7 @@
   },
   "tags": [
     {
-      "name": "General"
+      "name": "Utilities"
     }
   ]
 }

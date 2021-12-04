@@ -58,6 +58,11 @@
       "type": "component",
       "repeatable": false,
       "component": "order.price"
+    },
+    "information_product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "information.information-product"
     }
   }
 }

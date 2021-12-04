@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_information_information_products",
+  "info": {
+    "name": "information_product",
+    "icon": "audio-description",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "utility": {
+      "model": "utilities"
+    },
+    "value": {
+      "type": "biginteger"
+    }
+  }
+}

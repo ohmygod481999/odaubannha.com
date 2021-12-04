@@ -30,6 +30,7 @@ import Partner from "../components/sections1/Partner";
 import Testimonial from "../components/sections1/Testimonial";
 import Promotion from "../components/sections1/Promotion";
 import Search from "../components/sections1/Search";
+import Social from "../components/Social";
 
 export default function Home({ homePage, categories, generalInfo }) {
   const router = useRouter();
@@ -142,29 +143,18 @@ export default function Home({ homePage, categories, generalInfo }) {
       </Head>
       <ModalPromotion />
       <Search />
+      <Social
+        facebook={generalInfo.facebookUrl}
+        instagram={generalInfo.instagramUrl}
+        viber={generalInfo.viberUrl}
+        zalo={generalInfo.zaloUrl}
+      />
       <Banner2 bannerData={homePage} />
       <About1 homePage={homePage} />
       <Promotion />
       <HightlightProject HightlightProject={homePage} />
       <Testimonial feedback={homePage} />
       <Partner Partners={homePage} />
-      {/* <Menu2 categories={categories} />
-            <About2
-                title={_.get(homePage, "aboutus2.title")}
-                subDescription={_.get(homePage, "aboutus2.subDescription")}
-                description={_.get(homePage, "aboutus2.description")}
-                image_url1={_.get(homePage, "aboutus2.img1.url")}
-                image_url2={_.get(
-                    homePage,
-                    "aboutus2.img2.formats.thumbnail.url"
-                )}
-                image_url3={_.get(
-                    homePage,
-                    "aboutus2.img3.formats.thumbnail.url"
-                )}
-                btnLink={_.get(homePage, "aboutus2.btnLink")}
-                btnText={_.get(homePage, "aboutus2.btnText")}
-            /> */}
     </div>
   );
 }
