@@ -19,32 +19,35 @@ function Promotion({ homePage }) {
           </div>
           <div className="col-md-12 col-lg-12">
             <div className="owl-carousel neighborhoodss owl-dots-none mt-30 owl-loaded owl-drag">
-              {promotion_item.map((item) => (
-                <div className="neighborhoods-thumbnail wow animated slideInDown">
-                  <a href="#">
-                    <img src={getStrapiImage(item.image)} alt="images" />
-                  </a>
-                  {/* <h6 className="place-name py-5 px-30 bg-secondary position-absolute color-white">
-                  Brooklyn
-                </h6> */}
-                  <div className="bg-secondary py-10 px-20 color-white icon-primary d-table w-100">
-                    <ul>
-                      <li>
-                        <span className="mr-5">
-                          <i className="fa fa-map-marker" aria-hidden="true" />
+              {promotion_item.map((item) => {
+                const {url, description1, description2} = item
+                return (
+                  <div className="neighborhoods-thumbnail wow animated slideInDown">
+                    <a href={url}>
+                      <img src={getStrapiImage(item.image)} alt="images" />
+                    </a>
+                    <h6 className="place-name py-5 px-30 bg-secondary position-absolute color-white">
+                    {description1}
+                  </h6>
+                    <div className="bg-secondary py-10 px-20 color-white icon-primary d-table w-100">
+                      <ul>
+                        <li>
+                          <span className="mr-5">
+                            <i className="fa fa-map-marker" aria-hidden="true" />
+                          </span>{" "}
+                          {item.address}
+                        </li>
+                        <li>
+                          <span className="mr-5">
+                          <i className="fa fa-usd" aria-hidden="true" />
                         </span>{" "}
-                        {item.address}
-                      </li>
-                      <li>
-                        {/* <span className="mr-5">
-                        <i className="fa fa-usd" aria-hidden="true" />
-                      </span>{" "}
-                      Price : $1200 - $50000 */}
-                      </li>
-                    </ul>
+                        {description2}
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
               {/* <div className="neighborhoods-thumbnail wow animated slideInDown">
                 <a href="#">
                   <img src="images/explore/1.jpg" alt="images" />

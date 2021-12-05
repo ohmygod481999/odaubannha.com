@@ -970,6 +970,15 @@
                     },
                     "address": {
                       "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "description1": {
+                      "type": "string"
+                    },
+                    "description2": {
+                      "type": "string"
                     }
                   }
                 }
@@ -1573,6 +1582,15 @@
                       }
                     },
                     "address": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "description1": {
+                      "type": "string"
+                    },
+                    "description2": {
                       "type": "string"
                     }
                   }

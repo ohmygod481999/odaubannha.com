@@ -2,7 +2,8 @@
   "collectionName": "components_home_page_promotion_items",
   "info": {
     "name": "promotion_item",
-    "icon": "balance-scale-left"
+    "icon": "balance-scale-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,7 +20,16 @@
       "pluginOptions": {}
     },
     "address": {
-      "type": "text"
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "description1": {
+      "type": "string"
+    },
+    "description2": {
+      "type": "string"
     }
   }
 }
