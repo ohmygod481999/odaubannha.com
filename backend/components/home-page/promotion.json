@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_page_promotions",
+  "info": {
+    "name": "promotion",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "promotion_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.promotion-item"
+    }
+  }
+}

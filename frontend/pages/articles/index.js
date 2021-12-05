@@ -38,7 +38,7 @@ function BlogPage({
       />
       <Social
         facebook={generalInfo.facebookUrl}
-        instagram={generalInfo.instagramUrl}
+        youtube={generalInfo.youtubeUrl}
         viber={generalInfo.viberUrl}
         zalo={generalInfo.zaloUrl}
       />

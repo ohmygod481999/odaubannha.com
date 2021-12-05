@@ -52,6 +52,11 @@
       "type": "component",
       "repeatable": false,
       "component": "home-page.banner-home-page"
+    },
+    "promotion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.promotion"
     }
   }
 }

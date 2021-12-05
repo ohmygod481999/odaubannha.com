@@ -145,13 +145,13 @@ export default function Home({ homePage, categories, generalInfo }) {
       <Search />
       <Social
         facebook={generalInfo.facebookUrl}
-        instagram={generalInfo.instagramUrl}
+        youtube={generalInfo.youtubeUrl}
         viber={generalInfo.viberUrl}
         zalo={generalInfo.zaloUrl}
       />
       <Banner2 bannerData={homePage} />
       <About1 homePage={homePage} />
-      <Promotion />
+      <Promotion homePage={homePage} />
       <HightlightProject HightlightProject={homePage} />
       <Testimonial feedback={homePage} />
       <Partner Partners={homePage} />

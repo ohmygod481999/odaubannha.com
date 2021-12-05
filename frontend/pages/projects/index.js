@@ -19,7 +19,7 @@ function Projects({
       <Banner bannerData={projectsBanner} />
       <Social
         facebook={generalInfo.facebookUrl}
-        instagram={generalInfo.instagramUrl}
+        youtube={generalInfo.youtubeUrl}
         viber={generalInfo.viberUrl}
         zalo={generalInfo.zaloUrl}
       />

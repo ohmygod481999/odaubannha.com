@@ -1,6 +1,9 @@
 import React from "react";
+import { getStrapiImage } from "../../utils/medias";
 
-function Promotion() {
+function Promotion({ homePage }) {
+  const { promotion } = homePage;
+  const { subtitle, title, description, promotion_item } = promotion;
   return (
     <section>
       <div className="container">
@@ -8,19 +11,41 @@ function Promotion() {
           <div className="col-md-12 col-lg-12 wow animated slideInDown">
             <div className="main-title w-50 mx-auto d-table text-center mb-30">
               <span className="small-title color-primary position-relative line-2-primary">
-                Explore
+                {subtitle}
               </span>
-              <h2 className="title mb-20 color-secondary">Promotion</h2>
-              <span className="sub-title">
-                Sociis eget dui hendrerit urna felis euismod viverra. Inceptos
-                habitasse augue quisque facilisis per. Nibh justo massa
-                suscipit.
-              </span>
+              <h2 className="title mb-20 color-secondary">{title}</h2>
+              <span className="sub-title">{description}</span>
             </div>
           </div>
           <div className="col-md-12 col-lg-12">
             <div className="owl-carousel neighborhoodss owl-dots-none mt-30 owl-loaded owl-drag">
-              <div className="neighborhoods-thumbnail wow animated slideInDown">
+              {promotion_item.map((item) => (
+                <div className="neighborhoods-thumbnail wow animated slideInDown">
+                  <a href="#">
+                    <img src={getStrapiImage(item.image)} alt="images" />
+                  </a>
+                  {/* <h6 className="place-name py-5 px-30 bg-secondary position-absolute color-white">
+                  Brooklyn
+                </h6> */}
+                  <div className="bg-secondary py-10 px-20 color-white icon-primary d-table w-100">
+                    <ul>
+                      <li>
+                        <span className="mr-5">
+                          <i className="fa fa-map-marker" aria-hidden="true" />
+                        </span>{" "}
+                        {item.address}
+                      </li>
+                      <li>
+                        {/* <span className="mr-5">
+                        <i className="fa fa-usd" aria-hidden="true" />
+                      </span>{" "}
+                      Price : $1200 - $50000 */}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+              {/* <div className="neighborhoods-thumbnail wow animated slideInDown">
                 <a href="#">
                   <img src="images/explore/1.jpg" alt="images" />
                 </a>
@@ -163,7 +188,7 @@ function Promotion() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ function DetailBlog({ article = {}, articlesData, generalInfo }) {
       <BlogDetail article={article} articlesData={articlesData} />
       <Social
         facebook={generalInfo.facebookUrl}
-        instagram={generalInfo.instagramUrl}
+        youtube={generalInfo.youtubeUrl}
         viber={generalInfo.viberUrl}
         zalo={generalInfo.zaloUrl}
       />
