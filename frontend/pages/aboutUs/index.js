@@ -8,7 +8,7 @@ function About({ aboutUsData, generalInfo }) {
       <AboutUs aboutUsData={aboutUsData} />
       <Social
         facebook={generalInfo.facebookUrl}
-        instagram={generalInfo.instagramUrl}
+        youtube={generalInfo.youtubeUrl}
         viber={generalInfo.viberUrl}
         zalo={generalInfo.zaloUrl}
       />

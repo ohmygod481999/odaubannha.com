@@ -201,11 +201,7 @@ function Footer({ generalInfo }) {
                   )}
                 </a>
                 <div className="text-area mt-30 color-white">
-                  <p>
-                    Blandit pellente urna morbi. Dictumst duis eros facilisi
-                    libero ornare telluser ad proin phasellus class commodoral
-                    montes litora.
-                  </p>
+                  <p>{generalInfo.contentFooter}</p>
                 </div>
                 <ul className="social-media-2 border-white large color-white-a mt-20">
                   <li>
@@ -213,24 +209,10 @@ function Footer({ generalInfo }) {
                       <i className="fa fa-facebook" />
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
+
                   <li>
                     <a href="#">
                       <i className="fa fa-instagram" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-linkedin" />
                     </a>
                   </li>
                 </ul>

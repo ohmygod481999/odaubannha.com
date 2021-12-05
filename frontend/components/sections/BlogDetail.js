@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CommentInArticle from "./CommentInArticle";
 import { getStrapiURL } from "../../utils/api";
 import { getStrapiImage } from "../../utils/medias";
+import { FacebookShareButton } from "react-share";
 import Link from "next/link";
 import ReactHtmlParser, {
   processNodes,
@@ -14,8 +15,16 @@ import {
   getDayInMonth,
   getMonthName
 } from "../../utils/common";
-
+import { useRouter } from "next/router";
+import styles from "../../styles/BlogDetail.module.css";
 function BlogDetail({ article, articlesData }) {
+  const route = useRouter();
+  const _getLink = (path) => {
+    return `${
+      process.env.NEXT_PUBLIC_DEV_URL || "https://odaubannha.com"
+    }${path}`;
+  };
+  console.log(_getLink(route.asPath));
   const { title, description, image, created_at } = article;
   // let htmlDescription;
   const [htmlDescription, setHtmlDescription] = useState(
@@ -66,48 +75,21 @@ function BlogDetail({ article, articlesData }) {
                     <div className="col-lg-7 col-md-7">
                       <ul className="social-media-2 large color-secondary-a">
                         <li className="mr-10">Share:</li>
-                        <li>
-                          <a href="#">
+                        <li
+                          style={{
+                            borderColor: " #343a40",
+                            border: "2px solid",
+                            borderRadius: "50%"
+                          }}
+                        >
+                          <FacebookShareButton
+                            url={_getLink(route.asPath)}
+                            className={styles.button}
+                          >
                             <i className="fa fa-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fa fa-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fa fa-behance" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fa fa-instagram" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fa fa-linkedin" />
-                          </a>
+                          </FacebookShareButton>
                         </li>
                       </ul>
-                    </div>
-                    <div className="col-lg-5 col-md-5">
-                      <div className="float-right mt-sm-30">
-                        <ul className="pagination">
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              Prev
-                            </a>
-                          </li>
-                          <li className="page-item">
-                            <a className="page-link" href="#">
-                              Next
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </div>

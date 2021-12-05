@@ -1,27 +1,43 @@
 import React from "react";
 import styles from "../styles/Social.module.css";
-function Social({ facebook, instagram, viber, zalo }) {
+import { getStrapiURL } from "../utils/api";
+
+function Social({ facebook, youtube, viber, zalo }) {
+  const _getLinkImage = (image) => {
+    return `${
+      process.env.NEXT_PUBLIC_DEV_URL || "https://odaubannha.com"
+    }${image}`;
+  };
   return (
     <div className={styles.social}>
-      <a href={facebook ? facebook : "#"} className={styles.social__icon}>
+      <a href={viber ? viber : "#"} className={styles.social__icon}>
         <img
-          src="images/facebook-round.png"
-          alt="facebook"
+          src={_getLinkImage("/images/viber.png")}
+          alt="viber"
           className={styles.image}
         />
       </a>
       <a href={zalo ? zalo : "#"} className={styles.social__icon}>
-        <img src="images/zalo-round.png" alt="zalo" className={styles.image} />
-      </a>
-      <a href={instagram ? instagram : "#"} className={styles.social__icon}>
         <img
-          src="images/insta-round.png"
-          alt="instagram"
+          src={_getLinkImage("/images/zalo-round.png")}
+          alt="zalo"
           className={styles.image}
         />
       </a>
-      <a href={viber ? viber : "#"} className={styles.social__icon}>
-        <img src="images/viber.png" alt="viber" className={styles.image} />
+      <a href={facebook ? facebook : "#"} className={styles.social__icon}>
+        <img
+          src={_getLinkImage("/images/facebook-round.png")}
+          alt="facebook"
+          className={styles.image}
+        />
+      </a>
+
+      <a href={youtube ? youtube : "#"} className={styles.social__icon}>
+        <img
+          src={_getLinkImage("/images/youtube.png")}
+          alt="instagram"
+          className={styles.image}
+        />
       </a>
     </div>
   );

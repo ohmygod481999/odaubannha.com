@@ -473,10 +473,13 @@
           "zaloUrl": {
             "type": "string"
           },
-          "instagramUrl": {
+          "youtubeUrl": {
             "type": "string"
           },
           "viberUrl": {
+            "type": "string"
+          },
+          "contentFooter": {
             "type": "string"
           }
         }
@@ -504,10 +507,13 @@
           "zaloUrl": {
             "type": "string"
           },
-          "instagramUrl": {
+          "youtubeUrl": {
             "type": "string"
           },
           "viberUrl": {
+            "type": "string"
+          },
+          "contentFooter": {
             "type": "string"
           },
           "created_by": {
