@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/05/2021 10:10:47 AM"
+    "x-generation-date": "12/05/2021 1:30:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -10456,10 +10456,13 @@
           "zaloUrl": {
             "type": "string"
           },
-          "instagramUrl": {
+          "youtubeUrl": {
             "type": "string"
           },
           "viberUrl": {
+            "type": "string"
+          },
+          "contentFooter": {
             "type": "string"
           }
         }
@@ -10487,10 +10490,13 @@
           "zaloUrl": {
             "type": "string"
           },
-          "instagramUrl": {
+          "youtubeUrl": {
             "type": "string"
           },
           "viberUrl": {
+            "type": "string"
+          },
+          "contentFooter": {
             "type": "string"
           },
           "created_by": {

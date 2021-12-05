@@ -57,11 +57,14 @@
     "zaloUrl": {
       "type": "text"
     },
-    "instagramUrl": {
+    "youtubeUrl": {
       "type": "string"
     },
     "viberUrl": {
       "type": "text"
+    },
+    "contentFooter": {
+      "type": "richtext"
     }
   }
 }
