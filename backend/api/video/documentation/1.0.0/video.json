@@ -528,6 +528,12 @@
           "url": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -540,6 +546,12 @@
             "type": "string"
           },
           "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
             "type": "string"
           },
           "published_at": {

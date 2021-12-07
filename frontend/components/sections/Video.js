@@ -8,7 +8,7 @@ function Video({ videos }) {
         <div className="row ">
           <div className="col-md-12">
             {videos.map((video) => {
-              const { title, url, published_at } = video;
+              const { title, url, published_at, date, description } = video;
               return (
                 <div className="row" style={{ marginBottom: "20px" }}>
                   <div className="col-lg-5">
@@ -45,9 +45,12 @@ function Video({ videos }) {
                         <h3 className="color-secondary">{title}</h3>
                       </div>
                       <p>
-                        last update at: {"  "}
-                        <TimeAgo timestamp={published_at} />
+                        <i style={{
+                          fontSize: "15px"
+                        }}>{date}</i>
+                        {/* <TimeAgo timestamp={published_at} /> */}
                       </p>
+                      <p className="color-secondary">{description}</p>
                     </div>
                   </div>
                 </div>

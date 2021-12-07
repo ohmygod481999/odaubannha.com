@@ -10,3 +10,26 @@
   background-color: #fd9834;
   color: white;
 }
+
+.bg-secondary {
+  background-color: #010039 !important;
+}
+
+/* .color-primary {
+  background-color: #010039 !important;
+} */
+
+/* .color-primary {
+  color: #f1a501 !important;
+} */
+
+/* .bg-primary {
+  color: #f1a501 !important;
+} */
+
+.color-primary, .icon-primary i, .btn-more:hover, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-item .nav-link:hover, .navbar-light .navbar-nav .nav-item .nav-link:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu li.active .dropdown-item, .header-four .navbar .navbar-nav .nav-item .search-field span:hover, .navbar-light .navbar-nav .nav-item.active .nav-link, .burger-nav li.active .dropdown-item, .burger-nav li .dropdown-item:hover, .about-us .inner-title a:hover, .property-content a:hover, .service-info a:hover, .team-item a:hover, .quick-links a:hover, .blog-info .inner-title a:hover, .list-arrow-right li:before, .thum-map-content a:hover, .gallery-img a:hover, .breadcrumb a:hover, .breadcrumb-item+.breadcrumb-item::before, .blog-sidebar a:hover, .list-sidebar a:hover, .faq-ans a:hover, .btn-show-pass:hover, .form-list a:hover, .social-media-1 li a:hover, .copyright a:hover, .service-sidebar .widget-catogory a:hover, .price-range #debt-amount-slider input:checked + label::before, .navbar .navbar-nav .nav-item .search-field:hover, .custom-radio input[type="radio"]:checked~.text, .hover-secondery-primary a:hover, .social-media-3 a:hover, .post-title:hover, .header-five .search-field i.fa:hover, .admin-info li a:hover, .hover-white-primary a:hover, .br-widget > a.br-selected, .br-widget > a.br-active, .comment-content .user-rating li.active, .btn-link:hover, .rating i, .language .active {
+  color: #f1a501 !important;
+}
+.bg-primary, .line-primary:after, .line-right-primary:after, .line-2-primary:before, .line-2-primary:after, .page-link.active, .btn-primary, .btn-white:hover, #scroll:hover, .owl-nav button:hover, .social-media-2 a:hover, .progress-bar:before, .progress-bar, .owl-dot.active, .line-bottom:before, .ball-scale-multiple div, .property-cost li, #gaery-boxll::-webkit-scrollr-trackba, #gallery-box::-webkit-scrollbar-thumb:hover, .accordion [aria-expanded="true"], .news-letter button:hover, .invoice-list-table thead th:nth-child(odd), .faq-item .faq-icon, .data-placeholder:before, .price-range #debt-amount-slider #debt-amount-pos, .select-option li input[type="checkbox"]:checked + label::before, .bg-secondary .owl-dots button.active, .jslider .jslider-bg .v, .jslider .jslider-pointer, .custom-radio .design:before, .agencies-content .number, .round-shape:before, .text-thumbnail:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover, a.btn-round:hover, .navbar button span, a.video-popup, a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover, .experience:before, .experience:after, .years, .dotted:before, ::-webkit-scrollbar-thumb, .header-fixed.navside-view {
+  background-color: #f1a501 !important;
+}
