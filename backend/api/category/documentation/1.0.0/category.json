@@ -584,6 +584,9 @@
                 "information_product": {
                   "type": "component"
                 },
+                "url": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

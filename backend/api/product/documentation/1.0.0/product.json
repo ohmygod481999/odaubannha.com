@@ -741,6 +741,9 @@
                 }
               }
             }
+          },
+          "url": {
+            "type": "string"
           }
         }
       },
@@ -841,6 +844,9 @@
                 }
               }
             }
+          },
+          "url": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

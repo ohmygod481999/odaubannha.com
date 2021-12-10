@@ -142,7 +142,7 @@ export default function Home({ homePage, categories, generalInfo }) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <ModalPromotion />
-      <Search />
+      {/* <Search /> */}
       <Social
         facebook={generalInfo.facebookUrl}
         youtube={generalInfo.youtubeUrl}

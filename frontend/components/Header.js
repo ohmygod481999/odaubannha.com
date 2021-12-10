@@ -93,7 +93,7 @@ function Header({ generalInfo }) {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <nav className="navbar navbar-expand-lg navbar-light px-0">
+              <nav className="navbar navbar-expand-lg navbar-light px-0 py-0">
                 <a className="navbar-brand" href="/">
                   {generalInfo.logo && (
                     <img
