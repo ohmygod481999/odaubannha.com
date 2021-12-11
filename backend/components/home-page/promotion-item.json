@@ -25,10 +25,16 @@
     "url": {
       "type": "string"
     },
-    "description1": {
+    "description": {
       "type": "string"
     },
-    "description2": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "labels": {
       "type": "string"
     }
   }

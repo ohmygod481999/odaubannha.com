@@ -3,17 +3,13 @@ import Banner from "../../components/Banner";
 import { fetchAPI } from "../../utils/api";
 import Rents from "../../components/Rents";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function Rent({ rentData, generalInfo }) {
   return (
     <div style={{ width: "100vw" }}>
+      <Header generalInfo={generalInfo} />
       <Banner bannerData={rentData}></Banner>
       <Rents rentData={rentData} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
     </div>
   );
 }

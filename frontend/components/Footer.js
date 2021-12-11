@@ -111,7 +111,7 @@ function Footer({ generalInfo }) {
     <div style={{ width: "100vw" }}>
       <footer
         className="footer-2 bg-secondary py-80 border-bottom-1-dark"
-        style={{ marginTop: "80px" }}
+        style={{ marginTop: "80px", paddingBottom: "40px" }}
       >
         <div className="container">
           <div className="row">
@@ -189,6 +189,7 @@ function Footer({ generalInfo }) {
                 </form>
               </div>
             </div>
+            <div className="col-sm-6 col-md-4 col-lg-1 col-xl-1 wow animated slideInUp"></div>
             <div className="col-md-12 col-lg-5 col-xl-3 wow animated slideInDown">
               <div className="footer-logo mt-lg-30">
                 <a href="index.html">
@@ -203,22 +204,17 @@ function Footer({ generalInfo }) {
                 <div className="text-area mt-30 color-white">
                   <p>{generalInfo.contentFooter}</p>
                 </div>
-                <ul className="social-media-2 border-white large color-white-a mt-20">
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-instagram" />
-                    </a>
-                  </li>
+                <ul class="social-media-2 border-white large color-white-a mt-20">
+                  <li><a href={`tel:${generalInfo.phone}`}><i class="fa fa-phone"></i></a></li>
+                  <li><a target="_blank" href={generalInfo.zaloUrl} style={{
+                    fontFamily: "Fredoka One",
+                    fontSize: "12px"
+                  }}>Zalo</a></li>
+                  <li><a target="_blank" href={generalInfo.facebookUrl}><i class="fa fa-facebook"></i></a></li>
+                  <li><a target="_blank" href={generalInfo.youtubeUrl}><i class="fa fa-youtube"></i></a></li>
                 </ul>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4 col-lg-2 col-xl-2 wow animated slideInUp"></div>
             <div className="col-sm-6 col-md-8 col-lg-5 col-xl-3 wow animated slideInDown">
               <div className="footer-widget color-white mt-lg-30">
                 <h3 className="color-white line-bottom pb-15 mb-20">

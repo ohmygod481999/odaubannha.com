@@ -31,6 +31,7 @@ import Testimonial from "../components/sections1/Testimonial";
 import Promotion from "../components/sections1/Promotion";
 import Search from "../components/sections1/Search";
 import Social from "../components/Social";
+import Header2 from "../components/Header2";
 
 export default function Home({ homePage, categories, generalInfo }) {
   const router = useRouter();
@@ -141,14 +142,9 @@ export default function Home({ homePage, categories, generalInfo }) {
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <Header2 generalInfo={generalInfo}/>
       <ModalPromotion />
       {/* <Search /> */}
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
       <Banner2 bannerData={homePage} />
       <About1 homePage={homePage} />
       <Promotion homePage={homePage} />

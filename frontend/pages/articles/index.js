@@ -7,6 +7,7 @@ import Banner from "../../components/Banner";
 import { fetchAPI } from "../../utils/api";
 import Head from "next/head";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function BlogPage({
   articles,
   _limit,
@@ -29,18 +30,13 @@ function BlogPage({
       <Head>
         <title>{blogsBanner.title}</title>
       </Head>
+      <Header generalInfo={generalInfo} />
       <Banner bannerData={blogsBanner} />
       <Blog
         articles={articles}
         currentPage={currentPage}
         itemPerPage={itemPerPage}
         totalItems={totalItems}
-      />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
       />
     </div>
   );

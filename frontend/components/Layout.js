@@ -6,9 +6,9 @@ import Footer2 from "./sections/Footer2";
 import Cta from "./Cta";
 import Header2 from "./Header2";
 import { fetchAPI } from "../utils/api";
+import Social from "./Social";
 
 function Layout(props) {
-
     const [generalInfo, setGeneralInfo] = useState({});
 
     useEffect(() => {
@@ -18,14 +18,26 @@ function Layout(props) {
         });
     }, []);
 
+    const childrenWithProps = React.Children.map(props.children, (child) => {
+        // Checking isValidElement is the safe way and avoids a typescript
+        // error too.
+        if (React.isValidElement(child)) {
+            return React.cloneElement(child, { generalInfo });
+        }
+        return child;
+    });
+
     return (
         <>
-            <Header generalInfo={generalInfo}/>
-            {/* <Header2 generalInfo={generalInfo}/>
-            <Cart /> */}
-            {props.children}
-            <Footer generalInfo={generalInfo}/>
-            <div id="scroll" style={{display: 'none'}}><i className="fa fa-angle-up" /></div>
+            {/* <Header generalInfo={generalInfo}/> */}
+            {/* <Header2 generalInfo={generalInfo}/> */}
+            {/* <Cart /> */}
+            {childrenWithProps}
+            <Footer generalInfo={generalInfo} />
+            <Social generalInfo={generalInfo} />
+            <div id="scroll" style={{ display: "none" }}>
+                <i className="fa fa-angle-up" />
+            </div>
 
             {/* <Cta /> */}
         </>

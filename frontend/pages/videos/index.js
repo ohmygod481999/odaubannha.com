@@ -4,20 +4,16 @@ import { fetchAPI, getVideos } from "../../utils/api";
 import Banner from "../../components/Banner";
 import Head from "next/head";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function Videos({ videos, videoBanner, generalInfo }) {
   return (
     <div style={{ width: "100vw" }}>
       <Head>
         <title>{videoBanner.title}</title>
       </Head>
+      <Header generalInfo={generalInfo} />
       <Banner bannerData={videoBanner} />
       <Video videos={videos} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
     </div>
   );
 }

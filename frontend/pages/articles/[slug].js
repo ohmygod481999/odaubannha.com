@@ -4,6 +4,7 @@ import Head from "next/head";
 import { getStrapiImage } from "../../utils/medias";
 import { fetchAPI } from "../../utils/api";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function DetailBlog({ article = {}, articlesData, generalInfo }) {
   return (
     <div style={{ width: "100vw" }}>
@@ -25,13 +26,8 @@ function DetailBlog({ article = {}, articlesData, generalInfo }) {
           key="image"
         />
       </Head>
+      <Header generalInfo={generalInfo} />
       <BlogDetail article={article} articlesData={articlesData} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
     </div>
   );
 }

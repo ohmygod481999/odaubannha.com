@@ -2,16 +2,12 @@ import React from "react";
 import AboutUs from "../../components/AboutUs";
 import { fetchAPI } from "../../utils/api";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function About({ aboutUsData, generalInfo }) {
   return (
     <div style={{ width: "100vw" }}>
+      <Header generalInfo={generalInfo} />
       <AboutUs aboutUsData={aboutUsData} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import ProductsList from "../../components/ProductsList";
 import { fetchAPI } from "../../utils/api";
 import Head from "next/head";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function Projects({
   products,
   categories,
@@ -16,13 +17,8 @@ function Projects({
       <Head>
         <title>{projectsBanner.title}</title>
       </Head>
+      <Header generalInfo={generalInfo} />
       <Banner bannerData={projectsBanner} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
       <ProductsList
         products={products}
         categories={categories}

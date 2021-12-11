@@ -2,16 +2,12 @@ import React from "react";
 import Hiring from "../../components/Hiring";
 import { fetchAPI } from "../../utils/api";
 import Social from "../../components/Social";
+import Header from "../../components/Header";
 function Recruitement({ hiringData, generalInfo }) {
   return (
     <div style={{ width: "100vw" }}>
+      <Header generalInfo={generalInfo} />
       <Hiring hiringData={hiringData} />
-      <Social
-        facebook={generalInfo.facebookUrl}
-        youtube={generalInfo.youtubeUrl}
-        viber={generalInfo.viberUrl}
-        zalo={generalInfo.zaloUrl}
-      />
     </div>
   );
 }
