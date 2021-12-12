@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "subtitle": {
+    "subtitle2": {
       "type": "string"
     },
-    "title": {
+    "title2": {
       "type": "string"
     },
-    "description": {
+    "description2": {
       "type": "richtext"
     },
     "faq": {
@@ -42,6 +42,15 @@
       "type": "component",
       "repeatable": true,
       "component": "hiring.hiring-child"
+    },
+    "title1": {
+      "type": "string"
+    },
+    "description1": {
+      "type": "text"
+    },
+    "subtitle1": {
+      "type": "string"
     }
   }
 }

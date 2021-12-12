@@ -2,7 +2,7 @@ import React from "react";
 import { getStrapiImage } from "../utils/medias";
 
 function Hiring({ hiringData }) {
-  const { subtitle, title, description, faq, image, hiringChild } = hiringData;
+  const { subtitle1, title1, description1, subtitle2, title2, description2, faq, image, hiringChild } = hiringData;
   const iconClassName = [
     "flaticon-house-2",
     "flaticon-rental",
@@ -13,6 +13,18 @@ function Hiring({ hiringData }) {
   ];
   return (
     <section className="bg-gray">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-lg-6 wow animated slideInUp">
+            <div className="side-title mb-30">
+              <span className="small-title color-primary position-relative line-primary">{subtitle1}</span>
+              <h2 className="title mb-20 color-secondary">{title1}</h2>
+              <p>{description1}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container-fluid">
         <div className="row">
           <div
@@ -42,10 +54,10 @@ function Hiring({ hiringData }) {
           <div className="col-md-12 col-lg-6 bg-white py-80 px-60 wow animated slideInUp">
             <div className="side-title mb-30">
               <span className="small-title color-primary position-relative line-primary">
-                {subtitle}
+                {subtitle2}
               </span>
-              <h2 className="title mb-20 color-secondary">{title}</h2>
-              <p>{description}</p>
+              <h2 className="title mb-20 color-secondary">{title2}</h2>
+              <p>{description2}</p>
             </div>
             <div id="accordion" className="accordion-style-one">
               {faq.map((card, index) => {

@@ -744,6 +744,9 @@
           },
           "url": {
             "type": "string"
+          },
+          "labels": {
+            "type": "string"
           }
         }
       },
@@ -846,6 +849,9 @@
             }
           },
           "url": {
+            "type": "string"
+          },
+          "labels": {
             "type": "string"
           },
           "created_by": {

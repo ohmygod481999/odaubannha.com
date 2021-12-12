@@ -31,7 +31,7 @@ function Promotion({ homePage }) {
                                             alt="image"
                                         />
                                         <div className="thumbnail-content z-index-1 color-white-a color-white">
-                                          {labels? labels.split(" ").map((label, i) => (
+                                          {labels? labels.split(",").map((label, i) => (
                                             <span className={`thum-category category-${i + 1} bg-secondary color-white z-index-1 px-15`}>
                                                 {label}
                                             </span>

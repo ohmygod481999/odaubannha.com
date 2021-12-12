@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CommentInArticle from "./CommentInArticle";
 import { getStrapiURL } from "../../utils/api";
 import { getStrapiImage } from "../../utils/medias";
-import { FacebookShareButton } from "react-share";
+import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from "react-share";
 import Link from "next/link";
 import ReactHtmlParser, {
   processNodes,
@@ -76,18 +76,35 @@ function BlogDetail({ article, articlesData }) {
                       <ul className="social-media-2 large color-secondary-a">
                         <li className="mr-10">Share:</li>
                         <li
-                          style={{
-                            borderColor: " #343a40",
-                            border: "2px solid",
-                            borderRadius: "50%"
-                          }}
                         >
                           <FacebookShareButton
                             url={_getLink(route.asPath)}
-                            className={styles.button}
+                            style={{
+                              color: "black"
+                            }}
                           >
                             <i className="fa fa-facebook" />
                           </FacebookShareButton>
+                        </li>
+                        <li>
+                          <TwitterShareButton
+                            url={_getLink(route.asPath)}
+                            style={{
+                              color: "black"
+                            }}
+                            >
+                            <i className="fa fa-twitter" />
+                            </TwitterShareButton>
+                        </li>
+                        <li>
+                          <LinkedinShareButton
+                            url={_getLink(route.asPath)}
+                            style={{
+                              color: "black"
+                            }}
+                            >
+                            <i class="fa fa-linkedin"></i>
+                            </LinkedinShareButton>
                         </li>
                       </ul>
                     </div>

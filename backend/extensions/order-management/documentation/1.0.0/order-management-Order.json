@@ -302,6 +302,9 @@
                     "url": {
                       "type": "string"
                     },
+                    "labels": {
+                      "type": "string"
+                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -471,6 +474,9 @@
                       "type": "component"
                     },
                     "url": {
+                      "type": "string"
+                    },
+                    "labels": {
                       "type": "string"
                     },
                     "created_by": {

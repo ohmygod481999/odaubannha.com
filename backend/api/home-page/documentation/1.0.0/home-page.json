@@ -483,6 +483,9 @@
                 "url": {
                   "type": "string"
                 },
+                "labels": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

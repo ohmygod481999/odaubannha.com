@@ -124,7 +124,7 @@ function Footer({ generalInfo }) {
                   Đăng ký ngay nhận ngay thông tin!
                 </h3>
                 <form
-                  className="news-letter bg-gray mt-30"
+                  className=" bg-gray mt-30"
                   style={{ backgroundColor: "#fd9834" }}
                   onSubmit={_handleSubmit}
                 >
@@ -163,13 +163,22 @@ function Footer({ generalInfo }) {
                     />
                   </div>
                   <div className="form-group position-relative">
+                  {/* <button
+                      type="submit"
+                      className="btn bg-gray color-secondary px-4"
+                      // style={{ width: 0 }}
+                  >
+                      Submit{" "}
+                      <i className="fa fa-paper-plane" />
+                  </button> */}
                     {!checkSummit && (
                       <button
                         type="submit"
-                        className="bg-gray color-secondary"
+                        className="btn bg-gray color-secondary px-4"
                         style={{ left: 0 }}
                       >
-                        <i className="fa fa-paper-plane" />
+                      Submit{" "}
+                      <i className="fa fa-paper-plane" />
                       </button>
                     )}
                     {state.isLoading && (

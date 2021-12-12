@@ -318,13 +318,13 @@
           "id": {
             "type": "string"
           },
-          "subtitle": {
+          "subtitle2": {
             "type": "string"
           },
-          "title": {
+          "title2": {
             "type": "string"
           },
-          "description": {
+          "description2": {
             "type": "string"
           },
           "faq": {
@@ -434,6 +434,15 @@
               }
             }
           },
+          "title1": {
+            "type": "string"
+          },
+          "description1": {
+            "type": "string"
+          },
+          "subtitle1": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -442,13 +451,13 @@
       },
       "NewHiring": {
         "properties": {
-          "subtitle": {
+          "subtitle2": {
             "type": "string"
           },
-          "title": {
+          "title2": {
             "type": "string"
           },
-          "description": {
+          "description2": {
             "type": "string"
           },
           "faq": {
@@ -490,6 +499,15 @@
                 }
               }
             }
+          },
+          "title1": {
+            "type": "string"
+          },
+          "description1": {
+            "type": "string"
+          },
+          "subtitle1": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

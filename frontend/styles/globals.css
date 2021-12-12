@@ -37,3 +37,18 @@
 .bg-secondary, .btn-secondary, .owl-nav button, .owl-dots button, .property-cost li+li, a.video-popup:hover, #gallery-box::-webkit-scrollbar-thumb, .invoice-list-table thead th:nth-child(even), .formicon .checkbox_collapse:after, .hover-option li, .text-thumbnail:hover span, .btn-secondery, .nav-tabs .nav-item, a.btn-round, .page-link:hover, #scroll, .nav-on-banner.header-fixed {
   background-color: #010039 !important;
 }
+
+.social-media-2 li button{
+  width: 44px;
+  height: 44px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 3px;
+  border-radius: 50%;
+  border: 2px black solid !important;
+}
+.social-media-2 button:hover {
+	border-color: #f1a501 !important;
+  transition: 0.5s; /* delays for 1 second */
+
+}

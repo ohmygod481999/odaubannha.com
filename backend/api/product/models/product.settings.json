@@ -66,6 +66,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "labels": {
+      "type": "string"
     }
   }
 }
