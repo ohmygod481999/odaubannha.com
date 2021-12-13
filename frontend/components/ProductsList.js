@@ -610,7 +610,7 @@ function ProductsList({ products, categories, regions }) {
                                                         <div className="property-content bg-white pt-30 pb-50 px-30">
                                                             <a
                                                                 className="color-secondary mb-5"
-                                                                href="single-property.html"
+                                                                href={product.url}
                                                             >
                                                                 <h4>{title}</h4>
                                                             </a>

@@ -30,12 +30,12 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                         className="post-img overflow-hidden"
                         style={{ cursor: "pointer" }}
                       >
-                        <Link href={`/articles/${article.slug}`}>
+                        <a href={`/articles/${article.slug}`}>
                           <img
                             src={getStrapiImage(article.image, "LARGE")}
                             alt="Image not found!"
                           />
-                        </Link>
+                        </a>
                       </div>
                       <div className="post-meta icon-primary color-secondary-a px-20 py-10 bg-gray">
                         <ul className="post-info list-style-1 d-flex color-secondary">
@@ -54,11 +54,11 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                           </div>
                         </div>
                         <div className="text-area d-table">
-                          <Link href={`/articles/${article.slug}`}>
+                          <a href={`/articles/${article.slug}`}>
                             <a className="post-title mb-15">
                               <h5>{article.title}</h5>
                             </a>
-                          </Link>
+                          </a>
                           <p
                             style={{
                               overflow: "hidden",
@@ -70,9 +70,9 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                           >
                             {article.subdescription}
                           </p>
-                          <Link href={`/articles/${article.slug}`}>
+                          <a href={`/articles/${article.slug}`}>
                             <a className="btn-more mt-15">Read More</a>
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -99,12 +99,12 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                     return (
                       <li>
                         <h6>
-                          <Link
+                          <a
                             className="post-widget-title"
                             href={`/articles/${article.slug}`}
                           >
                             {article.title}
-                          </Link>
+                          </a>
                         </h6>
                         <div className="post-meta color-gray mt-5 f-14">
                           <span className="d-inline-block">

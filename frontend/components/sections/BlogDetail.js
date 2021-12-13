@@ -116,7 +116,7 @@ function BlogDetail({ article, articlesData }) {
           <div className="col-md-12 col-lg-4">
             <div className="blog-sidebar color-secondary-a">
               {/* Search form */}
-              <form className="form-inline position-relative shadow wow slideInDown animated">
+              {/* <form className="form-inline position-relative shadow wow slideInDown animated">
                 <input
                   className="form-control w-100 mb-0"
                   type="search"
@@ -126,7 +126,7 @@ function BlogDetail({ article, articlesData }) {
                 <button className="search-btn">
                   <i className="fa fa-search" aria-hidden="true" />
                 </button>
-              </form>
+              </form> */}
 
               {/* Recent News */}
               <div className="widget py-50 px-30 bg-white mt-50 shadow wow slideInDown animated">
@@ -138,12 +138,12 @@ function BlogDetail({ article, articlesData }) {
                     return (
                       <li>
                         <h6>
-                          <Link
+                          <a
                             className="post-widget-title"
                             href={`/articles/${article.slug}`}
                           >
                             {article.title}
-                          </Link>
+                          </a>
                         </h6>
                         <div className="post-meta color-gray mt-5 f-14">
                           <span className="d-inline-block">

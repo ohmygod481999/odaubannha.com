@@ -110,13 +110,7 @@ function HightlightProject({ HightlightProject }) {
                                             <div className="hover-content py-30 px-20 overlay-hover-gradient">
                                                 <div className="thumbnail-title z-index-1 position-relative">
                                                     <span className="thumbnail-price bg-white color-secondary px-15 mb-10 d-table">
-                                                        {formatMoney(
-                                                            project.price.from
-                                                        ) +
-                                                            "-" +
-                                                            formatMoney(
-                                                                project.price.to
-                                                            )}
+                                                        {project.price.from} tỷ - {project.price.to} tỷ
                                                     </span>
                                                     <a
                                                         className="color-secondary mb-5"
