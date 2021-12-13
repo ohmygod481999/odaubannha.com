@@ -71,6 +71,20 @@ function renderNav() {
           ) : null}
         </li>
       ))}
+      <li className="nav-item">
+                <form className="search-field" action="/projects" >
+                    <input
+                        name="title"
+                        type="search"
+                        className="search form-control"
+                        placeholder="Search Here"
+                    />
+                    <span>
+                        <i className="fa fa-search" />
+                        <i className="fa fa-times" />
+                    </span>
+                </form>
+            </li>
     </ul>
   );
 }

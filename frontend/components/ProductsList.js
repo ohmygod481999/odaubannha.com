@@ -5,6 +5,15 @@ import { formatDate, formatMoney } from "../utils/common";
 import { parseISO } from "date-fns";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { FacebookShareButton } from "react-share";
+import InterestedProjectModal from "./InterestedProjectModal";
+
+const _getLink = (path) => {
+    return `${
+        process.env.NEXT_PUBLIC_DEV_URL || "https://odaubannha.com"
+    }${path}`;
+};
+  
 function ProductsList({ products, categories, regions }) {
     const router = useRouter();
     const initialFilter = {
@@ -21,6 +30,10 @@ function ProductsList({ products, categories, regions }) {
     const [sort, setSort] = useState("newest");
     const [searchValue, setSearchValue] = useState("");
     const [check, setCheck] = useState(false);
+    const [dataInterestedModal, setDataInterestedModal] = useState({
+        state: 0,
+        data: null
+    })
     const _changeFilter = (key) => (e) => {
         setCondition((prev) => ({ ...prev, [key]: e.target.value }));
     };
@@ -249,6 +262,7 @@ function ProductsList({ products, categories, regions }) {
     }, [sort, _handleSortByTime]);
     return (
         <section className="bg-light products">
+            <InterestedProjectModal state={dataInterestedModal.state} dataModal={dataInterestedModal.data} setDataInterestedModal={setDataInterestedModal}/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 col-lg-12 wow slideInDown animated">
@@ -542,6 +556,13 @@ function ProductsList({ products, categories, regions }) {
                                                                         data-placement="top"
                                                                         title="Wishlist"
                                                                         href="#"
+                                                                        onClick={e => {
+                                                                            e.preventDefault()
+                                                                            setDataInterestedModal({
+                                                                                state: dataInterestedModal.state + 1,
+                                                                                data: product
+                                                                            })
+                                                                        }}
                                                                     >
                                                                         <i
                                                                             className="fa fa-heart-o"
@@ -553,13 +574,21 @@ function ProductsList({ products, categories, regions }) {
                                                                     <a
                                                                         data-toggle="tooltip"
                                                                         data-placement="top"
-                                                                        title="Compare"
+                                                                        title="Share on Facebook"
                                                                         href="#"
                                                                     >
-                                                                        <i
-                                                                            className="fa fa-random"
-                                                                            aria-hidden="true"
-                                                                        />
+                                                                        
+                                                                            <FacebookShareButton
+                                                                                url={product.url}
+                                                                                style={{
+                                                                                color: "black"
+                                                                                }}
+                                                                            >
+                                                                            <i
+                                                                                className="fa fa-random"
+                                                                                aria-hidden="true"
+                                                                            />
+                                                                            </FacebookShareButton>
                                                                     </a>
                                                                 </li>
                                                             </ul>

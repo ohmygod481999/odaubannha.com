@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "customers",
   "info": {
-    "name": "customers"
+    "name": "customers",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -19,6 +20,9 @@
     },
     "email": {
       "type": "email"
+    },
+    "interested_products": {
+      "collection": "product"
     }
   }
 }

@@ -75,7 +75,10 @@ function ModalPromotion({ imgUrl, href }) {
     };
     const _postApi = useCallback(async (api, data) => {
         try {
-            const result = await api(data);
+            const result = await api({
+                ...data,
+                interested_products: []
+            });
             if (result) {
                 dispatch({ type: "fullfilled", payload: result });
             } else {

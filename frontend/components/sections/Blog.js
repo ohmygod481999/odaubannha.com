@@ -80,6 +80,12 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
                 );
               })}
             </div>
+            
+        <Pagination
+          currentPage={currentPage}
+          totalItems={totalItems}
+          itemPerPage={itemPerPage}
+        />
           </div>
           <div className="col-md-12 col-lg-4">
             <div className="blog-sidebar color-secondary-a">
@@ -119,11 +125,6 @@ function Blog({ articles = [], currentPage, itemPerPage, totalItems }) {
             </div>
           </div>
         </div>
-        <Pagination
-          currentPage={currentPage}
-          totalItems={totalItems}
-          itemPerPage={itemPerPage}
-        />
       </div>
     </section>
   );

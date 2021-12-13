@@ -1,12 +1,34 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import { FacebookShareButton } from "react-share";
 import { formatMoney } from "../../utils/common";
 import { getStrapiImage } from "../../utils/medias";
+import InterestedProjectModal from "../InterestedProjectModal";
+
+const _getLink = (path) => {
+    return `${
+        process.env.NEXT_PUBLIC_DEV_URL || "https://odaubannha.com"
+    }${path}`;
+};
+  
 
 function HightlightProject({ HightlightProject }) {
+    const router = useRouter();
     const { highlight_project, products } = HightlightProject;
     const { title, subtitle, description } = highlight_project;
+
+    const [dataInterestedModal, setDataInterestedModal] = useState({
+        state: 0,
+        data: null,
+    });
+
     return (
         <section>
+            <InterestedProjectModal
+                state={dataInterestedModal.state}
+                dataModal={dataInterestedModal.data}
+                setDataInterestedModal={setDataInterestedModal}
+            />
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 col-lg-12 wow animated slideInUp">
@@ -21,7 +43,7 @@ function HightlightProject({ HightlightProject }) {
                         </div>
                     </div>
                     {products.map((project, i) => {
-                        const { information_product } = project;
+                        const { information_product, labels } = project;
                         return (
                             <div
                                 key={project.id}
@@ -34,12 +56,11 @@ function HightlightProject({ HightlightProject }) {
                                             alt="image"
                                         />
                                         <div className="thumbnail-content z-index-1 color-white-a color-white">
-                                            <span className="thum-category category-1 bg-secondary color-white z-index-1 px-15">
-                                                For Sale
-                                            </span>
-                                            <span className="thum-category category-2 bg-secondary color-white z-index-1 px-15">
-                                                Featured
-                                            </span>
+                                        {labels? labels.split(",").map((label, i) => (
+                                                              <span className={`thum-category category-${i + 1} bg-secondary color-white z-index-1 px-15`}>
+                                                                  {label}
+                                                              </span>
+                                                            )) : null}
                                             <ul className="hover-option position-absolute icon-white z-index-1">
                                                 <li>
                                                     <a
@@ -47,6 +68,17 @@ function HightlightProject({ HightlightProject }) {
                                                         data-placement="top"
                                                         title="Wishlist"
                                                         href="#"
+                                                        onClick={(e) => {
+                                                            e.preventDefault();
+                                                            setDataInterestedModal(
+                                                                {
+                                                                    state:
+                                                                        dataInterestedModal.state +
+                                                                        1,
+                                                                    data: project,
+                                                                }
+                                                            );
+                                                        }}
                                                     >
                                                         <i
                                                             className="fa fa-heart-o"
@@ -58,13 +90,20 @@ function HightlightProject({ HightlightProject }) {
                                                     <a
                                                         data-toggle="tooltip"
                                                         data-placement="top"
-                                                        title="Compare"
+                                                        title="Share on Facebook"
                                                         href="#"
                                                     >
-                                                        <i
-                                                            className="fa fa-random"
-                                                            aria-hidden="true"
-                                                        />
+                                                        <FacebookShareButton
+                                                            url={project.url}
+                                                            style={{
+                                                                color: "black",
+                                                            }}
+                                                        >
+                                                            <i
+                                                                className="fa fa-random"
+                                                                aria-hidden="true"
+                                                            />
+                                                        </FacebookShareButton>
                                                     </a>
                                                 </li>
                                             </ul>
