@@ -8,7 +8,7 @@ import { fetchAPI } from "../utils/api";
 
 function renderNav() {
   return (
-    <ul className="navbar-nav mx-auto">
+    <ul className="navbar-nav ml-auto">
       {navs.map((nav, i) => (
         <li key={i} className="nav-item dropdown">
           {/* <Link href={nav.path || ""}> */}

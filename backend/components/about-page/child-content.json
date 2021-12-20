@@ -2,7 +2,8 @@
   "collectionName": "components_about_page_child_contents",
   "info": {
     "name": "ChildContent",
-    "icon": "box-open"
+    "icon": "box-open",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,18 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
