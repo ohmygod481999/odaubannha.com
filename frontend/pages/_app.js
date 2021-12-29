@@ -29,6 +29,21 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"></link>
+        <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-4NC91758Z7`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-4NC91758Z7');
+              `,
+          }}
+      />
       </Head>
       <Component {...pageProps} />
 
