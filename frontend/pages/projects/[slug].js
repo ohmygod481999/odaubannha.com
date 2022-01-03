@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { convertMarkdownToHtml, formatDate } from "../../utils/common";
 import { useForm } from "react-hook-form";
 import { FacebookShareButton } from "react-share";
-import GoogleMapReact from 'google-map-react';
+import GoogleMapReact from "google-map-react";
 
 function DetailProject({ product = {}, latestProjects, generalInfo }) {
     const {
@@ -122,7 +122,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                 <i className="fa fa-map-marker" />
                                                 {product.address}
                                             </span>
-                                            <ul className="property-features d-flex f-14 mt-15">
+                                            <div className=" d-flex f-14 mt-15">
                                                 {product.information_product.map(
                                                     (info) => {
                                                         const {
@@ -132,23 +132,22 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                         const { title, image } =
                                                             utility || {};
                                                         return (
-                                                            <li>
-                                                                <img
-                                                                    src={getStrapiImage(
-                                                                        image
-                                                                    )}
-                                                                    className=""
-                                                                    alt=""
-                                                                    style={{
-                                                                        display:
-                                                                            "inline-block",
-                                                                        width: "20%",
-                                                                        marginRight:
-                                                                            "0.3rem",
-                                                                    }}
-                                                                />
+                                                            <div>
+                                                            <img
+                                                                src={getStrapiImage(
+                                                                    image
+                                                                )}
+                                                                alt=""
+                                                                style={{
+                                                                    display:
+                                                                        "inline-block",
+                                                                    width: "10%",
+                                                                    marginRight:
+                                                                        "0.3rem",
+                                                                }}
+                                                            />
                                                                 {value} {title}
-                                                            </li>
+                                                            </div>
                                                         );
                                                     }
                                                 )}
@@ -156,7 +155,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                     <li><i className="flaticon-hotel" />5 Bedrooms</li>
                                     <li><i className="flaticon-bathtub" />4 Bathrooms</li>
                                     <li><i className="flaticon-garage" />2 Garage</li> */}
-                                            </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-md-12 col-lg-4 wow slideInLeft animated">
@@ -176,17 +175,20 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                         data-placement="top"
                                                         href="#"
                                                     >
-                                                        <FacebookShareButton
-                                                            url={`/projects/${product.slug}`}
-                                                            style={{
-                                                                color: "black",
-                                                            }}
-                                                        >
-                                                            <i
-                                                            className="fa fa-share-alt"
-                                                                aria-hidden="true"
-                                                            />
-                                                        </FacebookShareButton>
+                                                        {typeof window !==
+                                                            "undefined" && (
+                                                            <FacebookShareButton
+                                                                url={`${window.location.origin}/projects/${product.slug}`}
+                                                                style={{
+                                                                    color: "black",
+                                                                }}
+                                                            >
+                                                                <i
+                                                                    className="fa fa-share-alt"
+                                                                    aria-hidden="true"
+                                                                />
+                                                            </FacebookShareButton>
+                                                        )}
                                                     </a>
                                                 </li>
                                                 <li>
@@ -197,8 +199,8 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                         href="#"
                                                         data-original-title="Print"
                                                         onClick={(e) => {
-                                                            e.preventDefault()
-                                                            window.print()
+                                                            e.preventDefault();
+                                                            window.print();
                                                         }}
                                                     >
                                                         <i
@@ -275,11 +277,14 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                     aria-labelledby="home-tab"
                                 >
                                     <div className="service-images owl-carousel slide-1 dot-on-slider">
-                                        {
-                                    (product.detail_images || []).map(image => (
-                                        <img src={getStrapiImage(image)} alt="image" />
-                                    ))
-                                }
+                                        {(product.detail_images || []).map(
+                                            (image) => (
+                                                <img
+                                                    src={getStrapiImage(image)}
+                                                    alt="image"
+                                                />
+                                            )
+                                        )}
                                         {/* <img
                                             src="/images/property/34.jpg"
                                             alt="image"
@@ -296,17 +301,26 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                     role="tabpanel"
                                     aria-labelledby="profile-tab"
                                 >
-                                    <div style={{ height: '100vh', width: '100%' }}>
+                                    <div
+                                        style={{
+                                            height: "100vh",
+                                            width: "100%",
+                                        }}
+                                    >
                                         {product.latlng && (
                                             <GoogleMapReact
-                                            bootstrapURLKeys={{ key: "AIzaSyC-JYD44Kkwvzp4tuax6gb_0sHcIDbwOjc" }}
-                                            defaultCenter={{
-                                                lat: product.latlng.lat,
-                                                lng: product.latlng.lng
-                                            }}
-                                            defaultZoom={product.latlng.zoom || 15}
+                                                bootstrapURLKeys={{
+                                                    key: "AIzaSyC-JYD44Kkwvzp4tuax6gb_0sHcIDbwOjc",
+                                                }}
+                                                defaultCenter={{
+                                                    lat: product.latlng.lat,
+                                                    lng: product.latlng.lng,
+                                                }}
+                                                defaultZoom={
+                                                    product.latlng.zoom || 15
+                                                }
                                             >
-                                            {/* <AnyReactComponent
+                                                {/* <AnyReactComponent
                                                 lat={59.955413}
                                                 lng={30.337844}
                                                 text="My Marker"
