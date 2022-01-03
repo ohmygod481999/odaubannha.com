@@ -23,6 +23,9 @@
     },
     "interested_products": {
       "collection": "product"
+    },
+    "message": {
+      "type": "text"
     }
   }
 }

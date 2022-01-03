@@ -591,6 +591,30 @@
                 "labels": {
                   "type": "string"
                 },
+                "detail_images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "amenities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "video": {
+                  "type": "string"
+                },
+                "floor_plans": {
+                  "type": "component"
+                },
+                "nearby": {
+                  "type": "component"
+                },
+                "latlng": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -599,6 +623,9 @@
                 }
               }
             }
+          },
+          "message": {
+            "type": "string"
           }
         }
       },
@@ -618,6 +645,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "message": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

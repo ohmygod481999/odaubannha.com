@@ -487,7 +487,8 @@ function ProductsList({ products, categories, regions }) {
                         image,
                         address,
                         information_product,
-                        labels
+                        labels,
+                        slug
                       } = product;
                       return (
                         <div className="col-md-12 col-lg-6 wow slideInDown animated">
@@ -536,7 +537,7 @@ function ProductsList({ products, categories, regions }) {
                                     href="#"
                                   >
                                     <FacebookShareButton
-                                      url={product.url}
+                                      url={`/projects/${product.slug}`}
                                       style={{
                                         color: "black"
                                       }}
@@ -564,7 +565,7 @@ function ProductsList({ products, categories, regions }) {
                             <div className="property-content bg-white pt-30 pb-50 px-30">
                               <a
                                 className="color-secondary mb-5"
-                                href={product.url}
+                                href={`/projects/${product.slug}`}
                               >
                                 <h4>{title}</h4>
                               </a>

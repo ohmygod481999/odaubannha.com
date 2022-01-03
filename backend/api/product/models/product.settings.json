@@ -69,6 +69,39 @@
     },
     "labels": {
       "type": "string"
+    },
+    "detail_images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "amenities": {
+      "collection": "amenity"
+    },
+    "video": {
+      "model": "video"
+    },
+    "floor_plans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.floor-plans"
+    },
+    "nearby": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.nearby"
+    },
+    "latlng": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.latlng"
     }
   }
 }

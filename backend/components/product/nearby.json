@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_product_nearbies",
+  "info": {
+    "name": "nearby",
+    "icon": "binoculars"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "places": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.places"
+    }
+  }
+}

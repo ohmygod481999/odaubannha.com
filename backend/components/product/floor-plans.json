@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_floor_plans",
+  "info": {
+    "name": "floor_plans",
+    "icon": "backward"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

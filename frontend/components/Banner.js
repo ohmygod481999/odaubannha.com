@@ -37,8 +37,10 @@ function Banner({ bannerData }) {
                     <Link href="/">Home</Link>
                   </li>
                   <li className="breadcrumb-item">
+                    
                     <Link href={path.pathname}>
-                      {path.pathname.replace("/", "")}
+                    {title}
+                      {/* {path.pathname.replace("/", "")} */}
                     </Link>
                   </li>
                 </ol>

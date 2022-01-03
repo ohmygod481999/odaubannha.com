@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_places",
+  "info": {
+    "name": "places",
+    "icon": "pager"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
