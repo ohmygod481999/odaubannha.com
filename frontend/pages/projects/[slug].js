@@ -133,19 +133,19 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                             utility || {};
                                                         return (
                                                             <div>
-                                                            <img
-                                                                src={getStrapiImage(
-                                                                    image
-                                                                )}
-                                                                alt=""
-                                                                style={{
-                                                                    display:
-                                                                        "inline-block",
-                                                                    width: "10%",
-                                                                    marginRight:
-                                                                        "0.3rem",
-                                                                }}
-                                                            />
+                                                                <img
+                                                                    src={getStrapiImage(
+                                                                        image
+                                                                    )}
+                                                                    alt=""
+                                                                    style={{
+                                                                        display:
+                                                                            "inline-block",
+                                                                        width: "10%",
+                                                                        marginRight:
+                                                                            "0.3rem",
+                                                                    }}
+                                                                />
                                                                 {value} {title}
                                                             </div>
                                                         );
@@ -307,7 +307,23 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                             width: "100%",
                                         }}
                                     >
-                                        {product.latlng && (
+                                        <div style={{ width: "100%" }}>
+                                            <iframe
+                                                width="100%"
+                                                height={600}
+                                                frameBorder={0}
+                                                scrolling="no"
+                                                marginHeight={0}
+                                                marginWidth={0}
+                                                src={`https://maps.google.com/maps?width=100%25&height=600&hl=en&q=${product.address}&t=&z=14&ie=UTF8&iwloc=B&output=embed`}
+                                            >
+                                                &lt;a
+                                                href="https://www.gps.ie/sport-gps/"&gt;swimming
+                                                watch&lt;/a&gt;
+                                            </iframe>
+                                        </div>
+
+                                        {/* {product.latlng && (
                                             <GoogleMapReact
                                                 bootstrapURLKeys={{
                                                     key: "AIzaSyC-JYD44Kkwvzp4tuax6gb_0sHcIDbwOjc",
@@ -320,13 +336,8 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                     product.latlng.zoom || 15
                                                 }
                                             >
-                                                {/* <AnyReactComponent
-                                                lat={59.955413}
-                                                lng={30.337844}
-                                                text="My Marker"
-                                            /> */}
                                             </GoogleMapReact>
-                                        )}
+                                        )} */}
                                     </div>
                                 </div>
                                 {/* <div
