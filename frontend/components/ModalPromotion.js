@@ -140,6 +140,7 @@ function ModalPromotion({ imgUrl, href }) {
                         className="modal-content"
                         style={{
                             backgroundColor: "transparent",
+                            border: "none"
                         }}
                         // style={{ overflow: "hidden", border: "none" }}
                     >

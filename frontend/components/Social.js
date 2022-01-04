@@ -10,7 +10,7 @@ function Social({ generalInfo }) {
     };
     return (
         <div className={styles.social}>
-            <ul class="social-media-2 large border-white color-white-a mt-20" style={{
+            <ul class="large border-white color-white-a mt-20" style={{
               display: "flex",
               flexDirection: "column",
             }}>
@@ -18,7 +18,10 @@ function Social({ generalInfo }) {
                   borderRadius: "50%",
                   width: "43px",
                   height: "43px",
-                  marginBottom: "10px"
+                  lineHeight: "43px",
+                  marginBottom: "10px",
+                  textAlign: "center",
+                  border: "2px solid white"
                 }}>
                     <a href={`tel:${generalInfo.phone}`}>
                         <i class="fa fa-phone"></i>
@@ -28,7 +31,10 @@ function Social({ generalInfo }) {
                   borderRadius: "50%",
                   width: "43px",
                   height: "43px",
-                  marginBottom: "10px"
+                  lineHeight: "43px",
+                  marginBottom: "10px",
+                  textAlign: "center",
+                  border: "2px solid white"
                 }}>
                     <a
                         target="_blank"
@@ -45,7 +51,10 @@ function Social({ generalInfo }) {
                   borderRadius: "50%",
                   width: "43px",
                   height: "43px",
-                  marginBottom: "10px"
+                  lineHeight: "43px",
+                  marginBottom: "10px",
+                  textAlign: "center",
+                  border: "2px solid white"
                 }}>
                     <a target="_blank" href={generalInfo.facebookUrl}>
                         <i class="fa fa-facebook"></i>
@@ -55,7 +64,10 @@ function Social({ generalInfo }) {
                   borderRadius: "50%",
                   width: "43px",
                   height: "43px",
-                  marginBottom: "10px"
+                  lineHeight: "43px",
+                  marginBottom: "10px",
+                  textAlign: "center",
+                  border: "2px solid white"
                 }}>
                     <a target="_blank" href={generalInfo.youtubeUrl}>
                         <i class="fa fa-youtube"></i>

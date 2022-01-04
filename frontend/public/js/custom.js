@@ -151,24 +151,24 @@
     });
     // Owl Carousal Slider Style One
 	//----------------------------------------------------------------------------------
-	$('.slide-1').owlCarousel({
-		 loop: true,
-		 autoplay:true,
-	     smartSpeed:1500,
-	     autoplayTimeout:5000,
-	     autoplayHoverPause:true,
-		 margin: 0,
-		 dots: true,
-		 nav: false,
-		 navText: ['<span class="fa fa-long-arrow-left"></span>','<span class="fa fa-long-arrow-right"></span>'],
-		 responsive:{
+	// $('.slide-1').owlCarousel({
+	// 	 loop: true,
+	// 	 autoplay:true,
+	//      smartSpeed:1500,
+	//      autoplayTimeout:5000,
+	//      autoplayHoverPause:true,
+	// 	 margin: 0,
+	// 	 dots: true,
+	// 	 nav: false,
+	// 	 navText: ['<span class="fa fa-long-arrow-left"></span>','<span class="fa fa-long-arrow-right"></span>'],
+	// 	 responsive:{
 
-		    0:{
-		      items:1
-		    }
-	  	}
+	// 	    0:{
+	// 	      items:1
+	// 	    }
+	//   	}
       
- 	});
+ 	// });
 	// Owl Carousal Slider Style Two
 	//----------------------------------------------------------------------------------
 	$('.slide-2').owlCarousel({
