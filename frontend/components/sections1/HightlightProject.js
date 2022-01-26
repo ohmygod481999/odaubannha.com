@@ -106,7 +106,7 @@ function HightlightProject({ HightlightProject }) {
                           </span>
                           <a
                             className="color-secondary mb-5"
-                            href={project.url}
+                            href={`/projects/${project.slug}`}
                           >
                             <h4>{project.title}</h4>
                           </a>
@@ -118,11 +118,11 @@ function HightlightProject({ HightlightProject }) {
 
                         <ul className="about-property icon-primary d-table f-14 z-index-1 position-relative">
                           {information_product?.map((info) => {
-                            const { value, utility } = info;
+                            const { values, utility } = info;
                             const { title, image } = utility;
                             return (
                               <li>
-                                <span className="color-primary">{value}</span>{" "}
+                                <span className="color-primary">{values && values.map(v => v.value).join("/")}</span>{" "}
                                 {title}
                               </li>
                             );

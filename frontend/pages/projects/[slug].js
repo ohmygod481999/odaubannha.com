@@ -126,7 +126,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                 {product.information_product.map(
                                                     (info) => {
                                                         const {
-                                                            value,
+                                                            values,
                                                             utility,
                                                         } = info;
                                                         const { title, image } =
@@ -146,7 +146,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                                                             "0.3rem",
                                                                     }}
                                                                 />
-                                                                {value} {title}
+                                                                {values && values.map(v => v.value).join("/")} {title}
                                                             </div>
                                                         );
                                                     }
@@ -387,14 +387,14 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                                         <ul className="list-by-tag">
                                             {product.information_product.map(
                                                 (info) => {
-                                                    const { value, utility } =
+                                                    const { values, utility } =
                                                         info;
                                                     const { title, image } =
                                                         utility || {};
                                                     return (
                                                         <li>
                                                             {title} :{" "}
-                                                            <span>{value}</span>
+                                                            <span>{values && (values.map(v => v.value).join("/ "))}</span>
                                                         </li>
                                                     );
                                                 }
@@ -469,7 +469,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                             </div>
                             <div className="border-top-1-gray py-30 wow slideInDown animated">
                                 <h3 className="color-secondary line-bottom pb-15 mb-20">
-                                    Floor Plan
+                                    Chi tiết mặt sàn
                                 </h3>
                                 <div
                                     id="accordion"
@@ -523,7 +523,7 @@ function DetailProject({ product = {}, latestProjects, generalInfo }) {
                             </div>
                             <div className="border-top-1-gray py-30 wow slideInRight animated">
                                 <h3 className="color-secondary line-bottom pb-15 mb-20">
-                                    What's Nearby
+                                    Tiện ích thành phố
                                 </h3>
                                 {product.nearby &&
                                     product.nearby.map((nearby) => (

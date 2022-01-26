@@ -736,8 +736,22 @@
                     }
                   }
                 },
-                "value": {
-                  "type": "integer"
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -1039,8 +1053,22 @@
                     }
                   }
                 },
-                "value": {
-                  "type": "integer"
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }

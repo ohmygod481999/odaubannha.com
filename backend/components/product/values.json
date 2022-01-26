@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_values",
+  "info": {
+    "name": "values",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  }
+}

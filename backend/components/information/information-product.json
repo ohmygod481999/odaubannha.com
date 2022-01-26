@@ -10,8 +10,10 @@
     "utility": {
       "model": "utilities"
     },
-    "value": {
-      "type": "biginteger"
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.values"
     }
   }
 }
