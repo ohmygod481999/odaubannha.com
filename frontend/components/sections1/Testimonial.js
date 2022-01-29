@@ -59,15 +59,13 @@ function Testimonial({ feedback }) {
                     <div className="col-md-12 col-lg-12 wow animated slideInUp">
                         <div className="main-title w-50 mx-auto d-table text-center mb-60">
                             <span className="small-title color-primary position-relative line-2-primary">
-                                Testimonial
+                                {subtitle}
                             </span>
                             <h2 className="title mb-20 color-secondary">
-                                What Our Client's Say
+                                {title}
                             </h2>
                             <span className="sub-title">
-                                Sociis eget dui hendrerit urna felis euismod
-                                viverra. Inceptos habitasse augue quisque
-                                facilisis per. Nibh justo massa suscipit.
+                                {description}
                             </span>
                         </div>
                     </div>
